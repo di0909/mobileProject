@@ -16,6 +16,7 @@ mongoose.connect('mongodb://localhost/food', function(err) {
 });
 
 var index = require('./routes/index');
+var image = require('./routes/image');
 var food = require('./routes/food');
 var suggestion = require('./routes/suggestion');
 
@@ -35,6 +36,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/food', food);
+app.use('/image', image);
+//app.use(multiparty({uploadDir:'./imagesPath' }));
 //app.use('/suggestion', suggestion);
 
 
