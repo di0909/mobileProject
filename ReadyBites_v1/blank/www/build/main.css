@@ -25726,6 +25726,20 @@ page-details .active {
   color: red;
 }
 
+page-details ul {
+  padding: 0px;
+}
+
+page-details ul.rating li {
+  padding: 5px 10px !important;
+  background: none;
+  color: #ffb400;
+}
+
+page-details ul.rating li ion-icon {
+  font-size: 30px;
+}
+
 page-suggestions .my-width {
   width: 60px;
 }

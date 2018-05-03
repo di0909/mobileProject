@@ -317,6 +317,31 @@ module.exports = [
     "clobbers": [
       "nativegeocoder"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
+  },
+  {
+    "id": "card.io.cordova.mobilesdk.CardIO",
+    "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
+    "pluginId": "card.io.cordova.mobilesdk",
+    "clobbers": [
+      "CardIO"
+    ]
+  },
+  {
+    "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
+    "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
+    "pluginId": "com.paypal.cordova.mobilesdk",
+    "clobbers": [
+      "PayPalMobile"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -333,7 +358,10 @@ module.exports.metadata =
   "cordova-plugin-advanced-http": "1.11.1",
   "cordova-plugin-file-transfer": "1.7.1",
   "cordova-plugin-geolocation": "4.0.1",
-  "cordova-plugin-nativegeocoder": "3.1.1"
+  "cordova-plugin-nativegeocoder": "3.1.1",
+  "cordova-plugin-inappbrowser": "3.0.0",
+  "card.io.cordova.mobilesdk": "2.1.0",
+  "com.paypal.cordova.mobilesdk": "3.5.0"
 };
 // BOTTOM OF METADATA
 });

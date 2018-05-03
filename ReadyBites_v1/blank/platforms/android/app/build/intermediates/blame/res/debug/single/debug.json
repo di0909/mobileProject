@@ -4,12 +4,12 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -28,12 +28,12 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/anim_abc_shrink_fade_out_from_bottom.xml.flat",
@@ -60,20 +60,20 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
-        "source": "/Users/xiu/Desktop/blank/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png"
-    },
-    {
-        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
+        "source": "/Users/xiu/Desktop/blank/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_search_api_mtrl_alpha.png.flat",
@@ -250,6 +250,10 @@
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_rating_star_off_mtrl_alpha.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_remove.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-hdpi/ic_action_remove.png"
     },
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -612,6 +616,10 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_next_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xhdpi/ic_action_next_item.png"
+    },
+    {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_ab_back_mtrl_am_alpha.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-ldrtl-xxhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png"
     },
@@ -718,6 +726,10 @@
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_remove.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_remove.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -948,6 +960,10 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
     },
     {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_previous_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-mdpi/ic_action_previous_item.png"
+    },
+    {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-hdpi-v4/abc_ic_star_black_16dp.png"
     },
@@ -1038,6 +1054,10 @@
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_next_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-hdpi/ic_action_next_item.png"
     },
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1322,6 +1342,10 @@
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat",
         "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_previous_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xhdpi/ic_action_previous_item.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/layout_abc_dialog_title_material.xml.flat",
@@ -1662,6 +1686,10 @@
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable_abc_edit_text_material.xml.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_next_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-mdpi/ic_action_next_item.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -2232,6 +2260,10 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/abc_search_view.xml"
     },
     {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_remove.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-mdpi/ic_action_remove.png"
+    },
+    {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
@@ -2536,6 +2568,10 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_previous_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-hdpi/ic_action_previous_item.png"
+    },
+    {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/layout_multiselectorgrid.xml.flat",
         "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/layout/multiselectorgrid.xml"
     },
@@ -2772,6 +2808,10 @@
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/layout/notification_template_media.xml"
     },
     {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_next_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_next_item.png"
+    },
+    {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -2802,6 +2842,10 @@
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_previous_item.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_previous_item.png"
     },
     {
         "merged": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -2842,6 +2886,10 @@
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
         "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_remove.png.flat",
+        "source": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/src/main/res/drawable-xhdpi/ic_action_remove.png"
     },
     {
         "merged": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",

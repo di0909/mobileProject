@@ -21,6 +21,7 @@ import { NativeGeocoder} from '@ionic-native/native-geocoder';
 import { File } from '@ionic-native/file';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
+import { Ionic2RatingModule } from 'ionic2-rating';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    Ionic2RatingModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

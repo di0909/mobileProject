@@ -16,21 +16,6 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-bg/values-bg.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,170,281,409,516,621,707,812,933,1012,1090,1173,1287,1396,1496,1610,1716,1824,1947,2046",
-                        "endColumns": "114,110,127,106,104,85,104,120,78,77,82,113,108,99,113,105,107,122,98,100",
-                        "endOffsets": "165,276,404,511,616,702,807,928,1007,1085,1168,1282,1391,1491,1605,1711,1819,1942,2041,2142"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-kk-rKZ_values-kk-rKZ.arsc.flat",
             "map": [
                 {
@@ -41,6 +26,21 @@
                         "startOffsets": "55,167,275,398,501,611,696,802,921,1002,1082,1163,1266,1371,1469,1576,1685,1785,1900,1999",
                         "endColumns": "111,107,122,102,109,84,105,118,80,79,80,102,104,97,106,108,99,114,98,100",
                         "endOffsets": "162,270,393,496,606,691,797,916,997,1077,1158,1261,1366,1464,1571,1680,1780,1895,1994,2095"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,170,281,409,516,621,707,812,933,1012,1090,1173,1287,1396,1496,1610,1716,1824,1947,2046",
+                        "endColumns": "114,110,127,106,104,85,104,120,78,77,82,113,108,99,113,105,107,122,98,100",
+                        "endOffsets": "165,276,404,511,616,702,807,928,1007,1085,1168,1282,1391,1491,1605,1711,1819,1942,2041,2142"
                     }
                 }
             ]
@@ -76,6 +76,21 @@
             ]
         },
         {
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-ka-rGE_values-ka-rGE.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-ka-rGE/values-ka-rGE.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,164,272,395,499,610,698,803,916,1000,1082,1165,1278,1385,1483,1596,1700,1804,1926,2024",
+                        "endColumns": "108,107,122,103,110,87,104,112,83,81,82,112,106,97,112,103,103,121,97,100",
+                        "endOffsets": "159,267,390,494,605,693,798,911,995,1077,1160,1273,1380,1478,1591,1695,1799,1921,2019,2120"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat",
             "map": [
                 {
@@ -87,21 +102,6 @@
                         "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,16,18,19,20,21,23,25,26,27,28,29,31,33,35,37,39,41,42,44,46,47,48,50,52,53,54,55,56,100,103,147,150,152,154,156,159,161,164,165,166,167,168,169,170,171,172,175,176,178,180,182,184,188,190,191,192,193,195,199,201,203,204,205,206,207,209,219,229,239,240,241",
                         "endColumns": "90,102,102,104,106,108,108,108,108,108,106,102,118,12,12,104,120,100,12,12,102,118,106,102,12,12,12,12,12,12,118,12,12,111,146,12,12,74,88,86,100,12,12,12,12,12,12,12,12,12,12,88,110,126,100,94,122,128,116,12,98,12,12,12,12,12,12,92,110,55,12,12,12,12,94,90,90,116,12,12,12,12,56,57",
                         "endOffsets": "141,244,347,452,559,668,777,886,995,1104,1211,1314,1433,1588,1743,1848,1969,2070,2217,2358,2461,2580,2687,2790,2945,3116,3265,3430,3587,3738,3857,4006,4155,4267,4414,4567,4714,4789,4878,4965,5066,8134,8320,11400,11598,11721,11844,11957,12140,12271,12472,12561,12672,12799,12900,12995,13118,13247,13364,13541,13640,13775,13918,14053,14172,14373,14492,14585,14696,14752,14859,15054,15165,15298,15393,15484,15575,15692,15831,16344,16869,17549,17606,17664"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-ka-rGE_values-ka-rGE.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-ka-rGE/values-ka-rGE.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,164,272,395,499,610,698,803,916,1000,1082,1165,1278,1385,1483,1596,1700,1804,1926,2024",
-                        "endColumns": "108,107,122,103,110,87,104,112,83,81,82,112,106,97,112,103,103,121,97,100",
-                        "endOffsets": "159,267,390,494,605,693,798,911,995,1077,1160,1273,1380,1478,1591,1695,1799,1921,2019,2120"
                     }
                 }
             ]
@@ -197,6 +197,21 @@
             ]
         },
         {
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,166,274,397,512,623,710,826,956,1039,1119,1215,1325,1437,1540,1651,1758,1860,1982,2081",
+                        "endColumns": "110,107,122,114,110,86,115,129,82,79,95,109,111,102,110,106,101,121,98,100",
+                        "endOffsets": "161,269,392,507,618,705,821,951,1034,1114,1210,1320,1432,1535,1646,1753,1855,1977,2076,2177"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
             "map": [
                 {
@@ -269,21 +284,6 @@
                         "endLines": "1182",
                         "endColumns": "12",
                         "endOffsets": "90739"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-fr-rCA/values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,166,274,397,512,623,710,826,956,1039,1119,1215,1325,1437,1540,1651,1758,1860,1982,2081",
-                        "endColumns": "110,107,122,114,110,86,115,129,82,79,95,109,111,102,110,106,101,121,98,100",
-                        "endOffsets": "161,269,392,507,618,705,821,951,1034,1114,1210,1320,1432,1535,1646,1753,1855,1977,2076,2177"
                     }
                 }
             ]
@@ -410,17 +410,16 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-v22_values-v22.arsc.flat",
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v22/values-v22.xml",
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-in/values-in.xml",
                     "from": {
-                        "startLines": "2,3,4,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,553",
-                        "endLines": "2,3,8,13",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,548,896"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,165,273,396,498,603,690,794,910,992,1071,1157,1260,1369,1470,1574,1682,1790,1913,2012",
+                        "endColumns": "109,107,122,101,104,86,103,115,81,78,85,102,108,100,103,107,107,122,98,100",
+                        "endOffsets": "160,268,391,493,598,685,789,905,987,1066,1152,1255,1364,1465,1569,1677,1785,1908,2007,2108"
                     }
                 }
             ]
@@ -441,16 +440,17 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat",
+            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-v22_values-v22.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-in/values-in.xml",
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v22/values-v22.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,165,273,396,498,603,690,794,910,992,1071,1157,1260,1369,1470,1574,1682,1790,1913,2012",
-                        "endColumns": "109,107,122,101,104,86,103,115,81,78,85,102,108,100,103,107,107,122,98,100",
-                        "endOffsets": "160,268,391,493,598,685,789,905,987,1066,1152,1255,1364,1465,1569,1677,1785,1908,2007,2108"
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
                     }
                 }
             ]
@@ -486,21 +486,6 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,259,323,394",
-                        "endColumns": "61,71,69,63,70,67",
-                        "endOffsets": "112,184,254,318,389,457"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat",
             "map": [
                 {
@@ -511,6 +496,21 @@
                         "startOffsets": "55,163,271,394,494,595,681,786,904,991,1073,1153,1260,1363,1460,1566,1665,1769,1888,1987",
                         "endColumns": "107,107,122,99,100,85,104,117,86,81,79,106,102,96,105,98,103,118,98,100",
                         "endOffsets": "158,266,389,489,590,676,781,899,986,1068,1148,1255,1358,1455,1561,1660,1764,1883,1982,2083"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,117,189,259,323,394",
+                        "endColumns": "61,71,69,63,70,67",
+                        "endOffsets": "112,184,254,318,389,457"
                     }
                 }
             ]
@@ -681,21 +681,6 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-ro/values-ro.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,176,284,407,511,624,712,824,945,1030,1112,1195,1307,1420,1520,1634,1739,1845,1966,2069",
-                        "endColumns": "120,107,122,103,112,87,111,120,84,81,82,111,112,99,113,104,105,120,102,100",
-                        "endOffsets": "171,279,402,506,619,707,819,940,1025,1107,1190,1302,1415,1515,1629,1734,1840,1961,2064,2165"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat",
             "map": [
                 {
@@ -706,6 +691,21 @@
                         "startOffsets": "55,171,279,402,503,616,703,812,933,1015,1096,1181,1290,1399,1499,1609,1713,1826,1956,2057",
                         "endColumns": "115,107,122,100,112,86,108,120,81,80,84,108,108,99,109,103,112,129,100,100",
                         "endOffsets": "166,274,397,498,611,698,807,928,1010,1091,1176,1285,1394,1494,1604,1708,1821,1951,2052,2153"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-ro/values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,176,284,407,511,624,712,824,945,1030,1112,1195,1307,1420,1520,1634,1739,1845,1966,2069",
+                        "endColumns": "120,107,122,103,112,87,111,120,84,81,82,111,112,99,113,104,105,120,102,100",
+                        "endOffsets": "171,279,402,506,619,707,819,940,1025,1107,1190,1302,1415,1515,1629,1734,1840,1961,2064,2165"
                     }
                 }
             ]
@@ -1144,6 +1144,21 @@
             ]
         },
         {
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-large-v4_values-large-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,117,189,248,319,390,460,530,598,666,730,785,889",
+                        "endColumns": "61,71,58,70,70,69,69,67,67,63,54,103,115",
+                        "endOffsets": "112,184,243,314,385,455,525,593,661,725,780,884,1000"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-v23_values-v23.arsc.flat",
             "map": [
                 {
@@ -1155,21 +1170,6 @@
                         "endLines": "2,3,4,5,18,31,32,33,34,35",
                         "endColumns": "134,134,74,86,12,12,104,114,106,112",
                         "endOffsets": "185,320,395,482,1272,2074,2179,2294,2401,2514"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-large-v4_values-large-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,248,319,390,460,530,598,666,730,785,889",
-                        "endColumns": "61,71,58,70,70,69,69,67,67,63,54,103,115",
-                        "endOffsets": "112,184,243,314,385,455,525,593,661,725,780,884,1000"
                     }
                 }
             ]
@@ -1380,21 +1380,6 @@
             ]
         },
         {
-            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-mk-rMK_values-mk-rMK.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-mk-rMK/values-mk-rMK.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,163,286,390,498,584,689,808,891,973,1060,1166,1273,1374,1481,1592,1696,1794",
-                        "endColumns": "107,122,103,107,85,104,118,82,81,86,105,106,100,106,110,103,97,100",
-                        "endOffsets": "158,281,385,493,579,684,803,886,968,1055,1161,1268,1369,1476,1587,1691,1789,1890"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat",
             "map": [
                 {
@@ -1405,6 +1390,21 @@
                         "startOffsets": "55,150,257,380,473,573,655,752,860,936,1012,1090,1186,1282,1377,1474,1569,1669,1782,1876",
                         "endColumns": "94,106,122,92,99,81,96,107,75,75,77,95,95,94,96,94,99,112,93,100",
                         "endOffsets": "145,252,375,468,568,650,747,855,931,1007,1085,1181,1277,1372,1469,1564,1664,1777,1871,1972"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/res/merged/debug/values-mk-rMK_values-mk-rMK.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-mk-rMK/values-mk-rMK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,163,286,390,498,584,689,808,891,973,1060,1166,1273,1374,1481,1592,1696,1794",
+                        "endColumns": "107,122,103,107,85,104,118,82,81,86,105,106,100,106,110,103,97,100",
+                        "endOffsets": "158,281,385,493,579,684,803,886,968,1055,1161,1268,1369,1476,1587,1691,1789,1890"
                     }
                 }
             ]

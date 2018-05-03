@@ -25678,6 +25678,68 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-details ion-content {
+  background-color: #EEEEEE !important;
+}
+
+page-details ion-scroll {
+  width: 100%;
+  height: 75px;
+  white-space: nowrap;
+}
+
+page-details ion-scroll ::-webkit-scrollbar {
+  display: none;
+}
+
+page-details .info {
+  padding: 10px 15px;
+  margin: 10px 0px;
+  background-color: #FFFFFF;
+}
+
+page-details .photos {
+  margin-bottom: 10px;
+}
+
+page-details .photos img {
+  margin: 0px 5px;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+page-details .reviews, page-details .photos {
+  background-color: #FFFFFF;
+  padding: 20px 0px;
+}
+
+page-details .reviews h3, page-details .photos h3 {
+  margin-top: 0px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+page-details .active {
+  color: red;
+}
+
+page-details ul {
+  padding: 0px;
+}
+
+page-details ul.rating li {
+  padding: 5px 10px !important;
+  background: none;
+  color: #ffb400;
+}
+
+page-details ul.rating li ion-icon {
+  font-size: 30px;
+}
+
 page-suggestions .my-width {
   width: 60px;
 }
