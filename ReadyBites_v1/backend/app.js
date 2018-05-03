@@ -7,6 +7,11 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 
+var flash = require('connect-flash');
+var session = require('express-session');
+var passport = require('passport');
+var expressValidator = require('express-validator');
+
 mongoose.connect('mongodb://localhost/food', function(err) {
     if (err) {
         console.log('connection error', err);
@@ -33,6 +38,30 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// handle session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
+const validatorOptions = {};
+app.use(expressValidator(validatorOptions));
+
+app.use(flash());
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
+
+app.get('*', function(req, res, next){
+    res.locals.user = req.user || null;
+    next();
+});
 
 app.use('/', index);
 app.use('/food', food);

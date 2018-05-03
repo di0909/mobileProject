@@ -20,12 +20,17 @@
         <ion-col>
           <ion-list inset>
             
-            <ion-item>
-              <ion-input type="text" placeholder="UserName" name="username" [(ngModel)]="username" required></ion-input>
+            <!-- <ion-item [(ngModel)]="address" name="address">        
+              <ion-label> <ion-icon name="locate"></ion-icon></ion-label>
+              <ion-input clearInput type="text" placeholder="Current Location"></ion-input>
+            </ion-item> -->
+
+            <ion-item name="username" [(ngModel)]="username">
+              <ion-input clearInput type="text" placeholder="UserName"  required></ion-input>
             </ion-item>
             
             <ion-item>
-              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+              <ion-input clearInput type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
             </ion-item>
             
           </ion-list>

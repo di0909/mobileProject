@@ -34,7 +34,6 @@ export class DiscoverPage {
   searchType: any;
   geocoder = new google.maps.Geocoder();
 
-
   constructor(public navCtrl: NavController, private camera: Camera, public http: Http,
               private transfer: FileTransfer, public geolocation: Geolocation) {
 
