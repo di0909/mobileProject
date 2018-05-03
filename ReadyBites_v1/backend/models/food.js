@@ -3,11 +3,24 @@ var mongoose = require('mongoose');
 //img
 var FoodSchema = new mongoose.Schema({
     type: String,
-    distance: Number, //time to go
     waitingTime: Number,
-    healthyIndex: Number,
+    calories: Number,
     taste: Number,
-    price: Number
+    price: Number,
+    image: String,
+    //location: {
+        // It's important to define type within type field, because
+        // mongoose use "type" to identify field's object type.
+        //type: {type: String, default: 'Point'},
+        coordinates: {type: [Number], default: [0, 0]},
+        address: String
+    //}
+    /*location: {
+        coordinates:{
+            type: { type: [Number]}, 
+            index: '2dsphere'
+        }
+    }*/
 });
 
 
