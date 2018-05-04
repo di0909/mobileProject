@@ -7,11 +7,17 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 
+var session = require('express-session');
+var passport = require('passport');
+var expressValidator = require('express-validator');
+var flash = require('connect-flash');
+
 mongoose.connect('mongodb://localhost/food', function(err) {
     if (err) {
         console.log('connection error', err);
     } else {
         console.log('mongodb connection successful');
+        console.log('----this code');
     }
 });
 
@@ -34,9 +40,34 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+//-------
+// handle session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
+const validatorOptions = {};
+app.use(expressValidator(validatorOptions));
+
+app.use(flash());
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
+
+app.get('*', function(req, res, next){
+    res.locals.user = req.user || null;
+    next();
+});
+//------
 app.use('/food', food);
 app.use('/image', image);
+app.use('/', index);
 //app.use(multiparty({uploadDir:'./imagesPath' }));
 //app.use('/suggestion', suggestion);
 

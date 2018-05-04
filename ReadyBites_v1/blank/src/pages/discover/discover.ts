@@ -19,7 +19,10 @@ export class DiscoverPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   localhost = "localhost";
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4d554f6989d0b78c9ef023da4b510765ca7dffc
   fileTransfer: FileTransferObject = this.transfer.create();
   base64Image: any;
   foodId = 0;
@@ -34,7 +37,6 @@ export class DiscoverPage {
   calories: any;
   searchType: any;
   geocoder = new google.maps.Geocoder();
-
 
   constructor(public navCtrl: NavController, private camera: Camera, public http: Http,
               private transfer: FileTransfer, public geolocation: Geolocation) {
