@@ -11,4 +11,14 @@ page-suggestions {
     font-size: 11px;
     color: #999999;
   }
+
+
+  .search-box {
+    position: absolute;
+    top: 2%;
+    z-index: 999;
+  }
+  ion-textarea {
+    font-size: 14px;
+  }
 }

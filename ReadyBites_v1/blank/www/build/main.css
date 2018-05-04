@@ -25792,3 +25792,13 @@ page-suggestions ion-icon[name="logo-euro"] {
   font-size: 11px;
   color: #999999;
 }
+
+page-suggestions .search-box {
+  position: absolute;
+  top: 2%;
+  z-index: 999;
+}
+
+page-suggestions ion-textarea {
+  font-size: 14px;
+}

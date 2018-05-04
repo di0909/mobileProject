@@ -21,7 +21,7 @@ var FoodSchema = new mongoose.Schema({
             index: '2dsphere'
         }
     }*/
-    rating: []
+    //rating: []
 });
 
 

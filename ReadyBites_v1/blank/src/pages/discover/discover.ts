@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { Geolocation } from '@ionic-native/geolocation';
 //import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { ChangeDetectorRef } from "@angular/core";
 
 declare var google;
 //declare var localhost = "192.168.0.103";
@@ -18,7 +19,7 @@ declare var google;
 export class DiscoverPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.128.218";
+  localhost = "localhost";
   fileTransfer: FileTransferObject = this.transfer.create();
   base64Image: any;
   foodId = 0;
@@ -29,13 +30,14 @@ export class DiscoverPage {
   type: any;
   waitingTime: any;
   price: any;
-  rate: any;
+  rate: 0;
   calories: any;
   searchType: any;
   geocoder = new google.maps.Geocoder();
 
   constructor(public navCtrl: NavController, private camera: Camera, public http: Http,
-              private transfer: FileTransfer, public geolocation: Geolocation) {
+              private transfer: FileTransfer, public geolocation: Geolocation,
+              private changeDetectorRef: ChangeDetectorRef) {
 
   }
   openCamera() {
@@ -123,6 +125,8 @@ export class DiscoverPage {
         //alert(res.json());
         //this.foodId = res.text();
         this.uploadImage(this.foodId);
+        //this.changeDetectorRef.detectChanges();
+        this.refresh();
         alert("success");
       }, (err) => {
         // error
@@ -203,5 +207,16 @@ export class DiscoverPage {
           this.sendData();
         }
       );
+  }
+
+  refresh() {
+    console.log("enter refresh");
+    this.base64Image = "";
+    this.address = "";
+    this.type = "";
+    this.waitingTime="";
+    this.price = "";
+    this.calories = "";
+    this.changeDetectorRef.detectChanges();
   }
 }

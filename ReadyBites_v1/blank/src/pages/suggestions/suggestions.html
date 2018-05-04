@@ -8,10 +8,21 @@
       <ion-label> <ion-icon name="search"></ion-icon></ion-label>
       <ion-input clearInput type="text" placeholder="Food Type"></ion-input>
     </ion-item>
-    <ion-item [(ngModel)]="address" name="address">        
+
+    <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+        </ion-item>
+      </ion-list>-->
+    <ion-searchbar autocorrect="off" autocapitalize="off" spellcheck="off" #searchbar placeholder="Search..." class="search-box"></ion-searchbar>
+
+    <!--<ion-item [(ngModel)]="address" name="address">        
       <ion-label> <ion-icon name="locate"></ion-icon></ion-label>
-      <ion-input clearInput type="text" placeholder="Current Location"></ion-input>
-    </ion-item>
+      <ion-input  clearInput type="text" placeholder="Current Location"></ion-input>
+    </ion-item>-->
+
+    
     <!--<ion-searchbar
       [(ngModel)]="searchType"
       name="searchType"
@@ -27,31 +38,29 @@
     <button id="search" ion-button outline color="royal" block (click)="render()">
         Search
     </button>
+
     <ion-row>
         <ion-col width-15> 
-          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged('distance')">
             Distance
           </button>
         </ion-col>
         <ion-col width-15>
-          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged('calories')">
             Calories
           </button>
         </ion-col>
         <ion-col width-15> 
-            <button value="taste" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
-            Taste
+            <button value="rate" ion-button outline color="royal" block (click)="onSegmentChanged('rate')">
+            Rate
             </button>
           </ion-col>
           <ion-col width-15>
-            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged('price')">
             Price
             </button>
           </ion-col>
       </ion-row>
-      <button id="test" ion-button outline color="royal" block (click)="downloadImage(1)">
-          test
-      </button>
     <!--
     <ion-toolbar no-border-top>
         <ion-segment [(ngModel)]="standard" name ="standard" (change)="onSegmentChanged($event)">
@@ -111,11 +120,13 @@
                   {{food.reviewCount}} Reviews
               </p>
               <p>{{food.address}}</p>
-              <p>{{food.waitingTime}}</p>
+              <p>{{food.calories}} kcal</p>
+              <p>You need to wait {{food.waitingTime}}min</p>
             </ion-col>
             <ion-col width-20 text-right>
               <p>{{food.distance}}mi.</p>
-              <p> ${{food.distance}}</p>
+
+              <p> ${{food.price}}</p>
               <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->
             </ion-col>
           </ion-row>
