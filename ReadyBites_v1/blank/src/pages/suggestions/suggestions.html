@@ -29,29 +29,21 @@
     </button>
     <ion-row>
         <ion-col width-15> 
-          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+          <button id="distance" value="distance" ion-button outline color="royal" block (click)="onSegmentChanged(this.id)">
             Distance
           </button>
         </ion-col>
         <ion-col width-15>
-          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+          <button id="calories" value="calories" ion-button outline color="royal" block (click)="onSegmentChanged(this.id)">
             Calories
           </button>
         </ion-col>
-        <ion-col width-15> 
-            <button value="taste" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
-            Taste
-            </button>
-          </ion-col>
           <ion-col width-15>
-            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged($event)">
+            <button id="calories" value="price" ion-button outline color="royal" block (click)="onSegmentChanged(this.id)">
             Price
             </button>
           </ion-col>
       </ion-row>
-      <button id="test" ion-button outline color="royal" block (click)="downloadImage(1)">
-          test
-      </button>
     <!--
     <ion-toolbar no-border-top>
         <ion-segment [(ngModel)]="standard" name ="standard" (change)="onSegmentChanged($event)">

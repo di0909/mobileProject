@@ -270,14 +270,7 @@ export class SuggestionsPage {
       // this.longitude = location.longitude;
       // this.getData();
   }
-
-  onSegmentChanged($event) {
-    console.log("enter changeStandard");
-    console.log($event);
-    console.log(this.standard);
-    this.getData();
-  }
-
+  
   /*ionViewWillEnter() {
     this.render();
   }*/
