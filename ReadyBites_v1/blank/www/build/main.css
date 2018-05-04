@@ -25678,6 +25678,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-details #map {
+  height: 30%;
+}
+
 page-details ion-content {
   background-color: #EEEEEE !important;
 }

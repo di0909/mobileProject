@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef} from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
@@ -6,6 +6,7 @@ import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal
 import { Http, RequestOptions, Headers, Response} from '@angular/http';
 
 import {global} from '../global';
+declare var google:any;
 
 @Component({
   selector: 'page-details',
@@ -13,9 +14,14 @@ import {global} from '../global';
 })
 export class Details {
   localhost = "128.237.128.218";
+  saddr: '40.4428122,-79.9452015';
+  daddr: '40.4378611,-79.9227327';
+  marker: any;
+
   food: any;
   reviewScore: Number;
   //stars: Array<any> = new Array(5);
+  @ViewChild('map') mapRef: ElementRef;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -70,14 +76,6 @@ export class Details {
     // error
       alert("error"+JSON.stringify(err));
     });
-  }
-
-  openMaps(){
-    const options: InAppBrowserOptions = {
-      zoom: 'no'
-    }
-    const browser = this.inAppBrowser.create('https://www.google.com/maps', '_self', options);
-    //browser.on('')
   }
 
   addFavorate(){
@@ -143,5 +141,81 @@ export class Details {
     }
     return false;
   }*/
+
+  ionViewDidLoad(){
+    this.showMap();
+  }
+
+  showMap(){
+    var location = {"lat":40.4428122,"lng":-79.9452015};
+    var dst = {"lat":40.4328122,"lng":-79.8452015}
+    const options = {
+      center: location,
+      zoom: 15,
+      zoomControl:true,
+      scaleControl:true
+      //mapTypeId: 'terrain'
+    }
+
+    const map = new google.maps.Map(document.getElementById('map'), options);
+    
+    var directionsDisplay = new google.maps.DirectionsRenderer({
+      map: map
+    });
+
+    // Set destination, origin and travel mode.
+    var request = {
+      destination: dst,
+      origin: location,
+      travelMode: 'DRIVING'
+    };
+
+    // Pass the directions request to the directions service.
+    var directionsService = new google.maps.DirectionsService();
+    directionsService.route(request, function(response, status) {
+      if (status == 'OK') {
+        // Display the route on the map.
+        directionsDisplay.setDirections(response);
+      }
+    });
+
+    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    this.marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: dst,
+      icon:image
+    });
+
+   // directionsDisplay.setOptions({ suppressMarkers: true ,icon:image});
+    // this.marker.addListener('click',this.toggleBounce);
+    //this.addMarker(location,map);
+  }
+
+  // toggleBounce() {
+  //   if (this.marker.getAnimation() !== null) {
+  //     this.marker.setAnimation(null);
+  //   } else {
+  //     this.marker.setAnimation(google.maps.Animation.BOUNCE);
+  //   }
+  // }
+
+  
+
+  // addMarker(position,map){
+  //     return new google.maps.Marker({position,map});
+  // }
+
+  openMaps(){
+    const options: InAppBrowserOptions = {
+      zoom: 'no'
+    }
+    const browser = this.inAppBrowser.create("https://www.google.com/maps/dir/40.4428122,-79.9452015/40.4378611,-79.9227327/@40.4411697,-79.9520621,14z/data=!3m1!4b1!4m2!4m1!3e3?hl=en", '_self', options);
+    //browser.on('')
+  }
+
+
+
+
 
 }
