@@ -25678,6 +25678,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-details #map {
+  height: 30%;
+}
+
 page-details ion-content {
   background-color: #EEEEEE !important;
 }
@@ -25777,6 +25781,20 @@ page-settings .record h3 {
   margin-top: 0px;
   padding-left: 15px;
   margin-bottom: 15px;
+}
+
+page-settings img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+page-settings ion-icon[name="logo-usd"],
+page-settings ion-icon[name="logo-euro"] {
+  font-size: 11px;
+  color: #999999;
 }
 
 page-suggestions img {

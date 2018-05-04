@@ -119,6 +119,8 @@ export class SuggestionsPage {
   }
 
   formatFoodArray(res) {
+    console.log('---here is resuslt');
+    console.log(res);
     for (var i in res) {
       var dis = this.computeDistance(res[i].coordinates[1], res[i].coordinates[0], this.latitude, this.longitude);
       res[i]['distance'] = (dis * 0.621371192).toFixed(2);;
@@ -127,7 +129,8 @@ export class SuggestionsPage {
       //console.log(res[i].image);
       res[i]['image'] = 'http://' + this.localhost + ':3000/image?id=' + foodId;
 
-      res[i]['reviewCount'] = 10; 
+      // res[i]['reviewCount'] = res[1].; 
+      res[i]['foodId'] = res[i]._id;
       console.log(res[i]);
 
     }

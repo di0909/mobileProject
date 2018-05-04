@@ -4,6 +4,7 @@ import { Http, RequestOptions, Headers, Response} from '@angular/http';
 import {SuggestionsPage} from '../suggestions/suggestions';
 import { SignInPage } from '../signIn/signIn';
 import { TabsControllerPage } from '../tabs-controller/tabs-controller';
+import {global} from '../global';
 
 @Component({
   selector: 'page-login',
@@ -33,7 +34,8 @@ export class LoginPage {
     this.http.post(postUrl, this.toparams(user), options)
     .subscribe((res: Response) => {
       alert("success");
-      this.navCtrl.push(TabsControllerPage, {username: this.username});
+      global.currentUser = this.username;
+      this.navCtrl.push(TabsControllerPage);
     }, (err) => {
     // error
       alert("error"+JSON.stringify(err));
