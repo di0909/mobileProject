@@ -212,7 +212,7 @@ router.post('/updateRateScore', function(req, res, next) {
         }
         food.totalRate = food.totalRate + Number(rateScore);
         food.rateCount = food.rateCount + 1;
-        food.rate = food.totalRate/food.rateCount;
+        food.rate = Math.round(food.totalRate/food.rateCount);
         res.status(200).json(food.save());
     });
 })

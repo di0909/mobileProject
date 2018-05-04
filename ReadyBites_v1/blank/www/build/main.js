@@ -1,16 +1,56 @@
 webpackJsonp([0],{
 
-/***/ 138:
+/***/ 1167:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(218);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage.prototype.skipIntroHandler = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Home\n    </ion-title>\n  </ion-navbar>\n</ion-header>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signIn_signIn__ = __webpack_require__(256);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_controller_tabs_controller__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__global__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signIn_signIn__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_controller_tabs_controller__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__global__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,7 +112,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = LoginPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col></ion-col>\n    <ion-col width-67>\n      <img src="http://placehold.it/300x200"/>\n    </ion-col>\n    <ion-col></ion-col>\n  </ion-row>\n  <div>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            \n            <!-- <ion-item [(ngModel)]="address" name="address">        \n              <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n              <ion-input clearInput type="text" placeholder="Current Location"></ion-input>\n            </ion-item> -->\n\n            <ion-item>\n              <ion-input clearInput type="text" placeholder="UserName"  name="username" [(ngModel)]="username" required></ion-input>\n            </ion-item>\n            \n            <ion-item>\n              <ion-input clearInput type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n            </ion-item>\n            \n          </ion-list>\n        </ion-col>\n      </ion-row>\n      \n      <ion-row>\n        <ion-col>\n          <button ion-button ion-button outline color="royal" block [disabled]="!registerForm.form.valid" (click)="login()">Login</button>\n          <button ion-button ion-button outline color="royal" block (click)="renderSignIn()">Create New Account</button>\n        </ion-col>\n      </ion-row>\n      \n    </form>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col></ion-col>\n    <ion-col width-67>\n      <img src="http://placehold.it/300x200"/>\n    </ion-col>\n    <ion-col></ion-col>\n  </ion-row>\n  <div>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            \n            <!-- <ion-item [(ngModel)]="address" name="address">        \n              <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n              <ion-input clearInput type="text" placeholder="Current Location"></ion-input>\n            </ion-item> -->\n\n            <ion-item>\n              <ion-input clearInput type="text" placeholder="UserName"  name="username" [(ngModel)]="username" required></ion-input>\n            </ion-item>\n            \n            <ion-item>\n              <ion-input clearInput type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n            </ion-item>\n            \n          </ion-list>\n        </ion-col>\n      </ion-row>\n      \n      <ion-row>\n        <ion-col>\n          <button ion-button ion-button outline color="royal" block [disabled]="!registerForm.form.valid" (click)="login()">Login</button>\n          <button ion-button ion-button outline color="royal" block (click)="renderSignIn()">Create New Account</button>\n        </ion-col>\n      </ion-row>\n      \n    </form>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], LoginPage);
@@ -84,16 +124,16 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 139:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsControllerPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__suggestions_suggestions__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__discover_discover__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings_settings__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__suggestions_suggestions__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__discover_discover__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings_settings__ = __webpack_require__(459);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -119,7 +159,7 @@ var TabsControllerPage = /** @class */ (function () {
     }
     TabsControllerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-tabs-controller',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/tabs-controller/tabs-controller.html"*/'<ion-tabs id="tabsController-tabs1">\n  <ion-tab [root]="tab1Root" tabTitle="Suggestions" tabIcon="heart" id="tabsController-tab1"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Discover" tabIcon="brush" id="tabsController-tab2"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Setting" tabIcon="settings" id="tabsController-tab3"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/tabs-controller/tabs-controller.html"*/
+            selector: 'page-tabs-controller',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/tabs-controller/tabs-controller.html"*/'<ion-tabs id="tabsController-tabs1">\n  <ion-tab [root]="tab1Root" tabTitle="Suggestions" tabIcon="heart" id="tabsController-tab1"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Discover" tabIcon="brush" id="tabsController-tab2"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Setting" tabIcon="settings" id="tabsController-tab3"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/tabs-controller/tabs-controller.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], TabsControllerPage);
@@ -130,16 +170,16 @@ var TabsControllerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 141:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Details; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -171,12 +211,15 @@ var Details = /** @class */ (function () {
             console.log(p);
             return p.join('&');
         };
-        this.food = this.navParams.data;
-        this.sLati = this.food.sLati;
-        this.sLong = this.food.sLong;
-        this.dLati = this.food.dLati;
-        this.dLong = this.food.dLong;
-        alert(this.food);
+        this.inputData = this.navParams.data;
+        console.log('food');
+        console.log(this.inputData);
+        this.sLati = this.inputData.sLati;
+        this.sLong = this.inputData.sLong;
+        this.dLati = this.inputData.dLati;
+        this.dLong = this.inputData.dLong;
+        this.food = this.inputData.foodObj;
+        alert(this.inputData);
     }
     Details.prototype.doConfirm = function () {
         var _this = this;
@@ -244,6 +287,7 @@ var Details = /** @class */ (function () {
         this.reviewScore = event;
     };
     Details.prototype.clickRate = function () {
+        var _this = this;
         var data = {
             'foodId': this.food._id,
             'rate': this.reviewScore,
@@ -255,11 +299,15 @@ var Details = /** @class */ (function () {
         console.log('before login');
         this.http.post(postUrl, this.toparams(data), options)
             .subscribe(function (res) {
+            _this.refresh();
             alert("success");
         }, function (err) {
             // error
             alert("error" + JSON.stringify(err));
         });
+    };
+    Details.prototype.refresh = function () {
+        console.log("enter refresh");
     };
     /*isActive(index: number) {
       if (this.restaurant.rating >= index) {
@@ -335,7 +383,7 @@ var Details = /** @class */ (function () {
     ], Details.prototype, "mapRef", void 0);
     Details = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-details',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/details/details.html"*/'<!--\n  Generated template for the Details page.\n\n  See http://ionicframework.com/docs/v2/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="ionic">\n    <ion-title>{{food.type}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div class="info">\n    <h2> {{food.type}}</h2>\n    <p>\n      Rate:{{food.rate}} | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}\n    </p>\n  </div>\n\n  <rating [(ngModel)]="rate" \n        readOnly="false" \n        max="5" \n        emptyStarIconName="star-outline"\n        halfStarIconName="star-half" \n        starIconName="star" \n        nullable="false"\n        (ngModelChange)="onModelChange($event)"> <!--use it when you need to do something when user clicks on a star. in case you only need to change ngModel property, this property can be ommited.-->\n</rating>\n<button ion-button block (click)="clickRate()">Rate</button>\n\n <div #map id="map"> </div>\n  <ion-list>\n      <button ion-item block (click)="openMaps()" >\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Get Directions</h3>\n      </button>\n    \n      <button ion-item>\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Reviews</h3>\n      </button>\n    \n      <button ion-item block (click)="addFavorate()">\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Add to Favorites</h3>\n      </button>\n    \n    </ion-list>\n    \n    <button ion-button block (click)="doConfirm()">Pay Now</button>\n  </ion-content>\n  <!--<div class="photos">\n    <h3>Pictures</h3>\n    <ion-scroll scrollX="true">\n      <img [src]="photo.thumbnail" *ngFor="let photo of restaurant.photos; let i=index" tappable (click)="showImage(restaurant.name, restaurant.photos, i)">\n    </ion-scroll>\n  </div>-->\n  \n  <!--\n  <div class="reviews">\n    <h3>Reviews</h3>\n    <p *ngIf="restaurant.reviews.length==0">No reviews yet =(</p>\n    <div *ngIf="restaurant.reviews.length>0">\n      <review *ngFor="let review of restaurant.reviews" [reviewDetails]="review"></review>\n    </div>\n  </div> -->\n'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/details/details.html"*/
+            selector: 'page-details',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/details/details.html"*/'<!--\n  Generated template for the Details page.\n\n  See http://ionicframework.com/docs/v2/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="ionic">\n    <ion-title>{{food.type}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div class="info">\n    <h2> {{food.type}}</h2>\n    <p>\n      Rate:{{food.rate}} | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}\n    </p>\n  </div>\n\n  <rating [(ngModel)]="rate" \n        readOnly="false" \n        max="5" \n        emptyStarIconName="star-outline"\n        halfStarIconName="star-half" \n        starIconName="star" \n        nullable="false"\n        (ngModelChange)="onModelChange($event)"> <!--use it when you need to do something when user clicks on a star. in case you only need to change ngModel property, this property can be ommited.-->\n</rating>\n<button ion-button block (click)="clickRate()">Rate</button>\n\n <div #map id="map"> </div>\n  <ion-list>\n      <button ion-item block (click)="openMaps()" >\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Get Directions</h3>\n      </button>\n    \n      <button ion-item>\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Reviews</h3>\n      </button>\n    \n      <button ion-item block (click)="addFavorate()">\n        <ion-avatar item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-avatar>\n        <h3>Add to Favorites</h3>\n      </button>\n    \n    </ion-list>\n    \n    <button ion-button block (click)="doConfirm()">Pay Now</button>\n  </ion-content>\n  <!--<div class="photos">\n    <h3>Pictures</h3>\n    <ion-scroll scrollX="true">\n      <img [src]="photo.thumbnail" *ngFor="let photo of restaurant.photos; let i=index" tappable (click)="showImage(restaurant.name, restaurant.photos, i)">\n    </ion-scroll>\n  </div>-->\n  \n  <!--\n  <div class="reviews">\n    <h3>Reviews</h3>\n    <p *ngIf="restaurant.reviews.length==0">No reviews yet =(</p>\n    <div *ngIf="restaurant.reviews.length>0">\n      <review *ngFor="let review of restaurant.reviews" [reviewDetails]="review"></review>\n    </div>\n  </div> -->\n'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/details/details.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -350,7 +398,7 @@ var Details = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 166:
+/***/ 270:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -363,11 +411,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 166;
+webpackEmptyAsyncContext.id = 270;
 
 /***/ }),
 
-/***/ 211:
+/***/ 315:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -380,20 +428,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 211;
+webpackEmptyAsyncContext.id = 315;
 
 /***/ }),
 
-/***/ 256:
+/***/ 360:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_controller_tabs_controller__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_controller_tabs_controller__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -454,7 +502,7 @@ var SignInPage = /** @class */ (function () {
     };
     SignInPage = SignInPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-signIn',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        SignIn\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding>\n    <ion-row>\n      <ion-col></ion-col>\n      <ion-col width-67>\n        <img src="http://placehold.it/300x200"/>\n      </ion-col>\n      <ion-col></ion-col>\n    </ion-row>\n    <div>\n        <ion-row>\n          <ion-col>\n            <ion-list inset>\n              \n              <ion-item [(ngModel)]="username" name="username">\n                <ion-input type="text" placeholder="UserName"></ion-input>\n              </ion-item>\n              \n              <ion-item>\n                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n              </ion-item>\n              \n            </ion-list>\n          </ion-col>\n        </ion-row>\n        \n        <ion-row>\n          <ion-col>\n            <button ion-button ion-button outline color="royal" block (click)="createAccount()">Create New Account</button>\n          </ion-col>\n        </ion-row>\n        \n    </div>\n  </ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/
+            selector: 'page-signIn',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        SignIn\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding>\n    <ion-row>\n      <ion-col></ion-col>\n      <ion-col width-67>\n        <img src="http://placehold.it/300x200"/>\n      </ion-col>\n      <ion-col></ion-col>\n    </ion-row>\n    <div>\n        <ion-row>\n          <ion-col>\n            <ion-list inset>\n              \n              <ion-item [(ngModel)]="username" name="username">\n                <ion-input type="text" placeholder="UserName"></ion-input>\n              </ion-item>\n              \n              <ion-item>\n                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n              </ion-item>\n              \n            </ion-list>\n          </ion-col>\n        </ion-row>\n        \n        <ion-row>\n          <ion-col>\n            <button ion-button ion-button outline color="royal" block (click)="createAccount()">Create New Account</button>\n          </ion-col>\n        </ion-row>\n        \n    </div>\n  </ion-content>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], SignInPage);
@@ -466,21 +514,22 @@ var SignInPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 257:
+/***/ 361:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuggestionsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__details_details__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__details_details__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_geo_service__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_geo_service__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__global__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -490,6 +539,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -602,7 +652,7 @@ var SuggestionsPage = /** @class */ (function () {
             res[i]['image'] = 'http://' + this.localhost + ':3000/image?id=' + foodId;
             // res[i]['reviewCount'] = res[1].; 
             res[i]['foodId'] = res[i]._id;
-            console.log(res[i]);
+            // console.log(res[i]);
         }
         return res;
     };
@@ -649,12 +699,14 @@ var SuggestionsPage = /** @class */ (function () {
     //console.log(this.foodArray);
     SuggestionsPage.prototype.getCurrentPosition = function () {
         var _this = this;
-        console.log("enter getCurrentPosition");
+        // console.log("enter getCurrentPosition");
         this.geolocation.getCurrentPosition().then(function (resp) {
             _this.latitude = resp.coords.latitude;
             _this.longitude = resp.coords.longitude;
-            console.log(resp.coords.latitude);
-            console.log(resp.coords.longitude);
+            // console.log(resp.coords.latitude);
+            // console.log(resp.coords.longitude);
+            __WEBPACK_IMPORTED_MODULE_9__global__["a" /* global */].latitude = Number(_this.latitude);
+            __WEBPACK_IMPORTED_MODULE_9__global__["a" /* global */].longitude = Number(_this.longitude);
             _this.geocodelatLng(function (address) {
                 _this.address = address;
                 _this.getData();
@@ -677,7 +729,7 @@ var SuggestionsPage = /** @class */ (function () {
         this.geocoder.geocode({ 'latLng': latLng }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 var address = results[0].formatted_address;
-                console.log(address);
+                // console.log(address); 
                 callback(address);
             }
             else {
@@ -711,11 +763,16 @@ var SuggestionsPage = /** @class */ (function () {
         return new Array(size);
     };
     SuggestionsPage.prototype.isActive = function (index, food) {
-        //console.log(index);
-        if (2 >= index) {
+        // console.log(index);
+        // console.log(food.rate);
+        if (food.rate >= index) {
+            console.log('true');
             return true;
         }
-        return false;
+        else {
+            console.log('false');
+            return false;
+        }
     };
     SuggestionsPage.prototype.showDetails = function (food) {
         console.log("before pushing");
@@ -723,7 +780,8 @@ var SuggestionsPage = /** @class */ (function () {
         var param = { sLati: this.latitude,
             sLong: this.longitude,
             dLati: food.coordinates[1],
-            dLong: food.coordinates[0] };
+            dLong: food.coordinates[0],
+            foodObj: food };
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__details_details__["a" /* Details */], param);
     };
     SuggestionsPage.prototype.initAutocomplete = function () {
@@ -794,7 +852,7 @@ var SuggestionsPage = /** @class */ (function () {
     ], SuggestionsPage.prototype, "searchbar", void 0);
     SuggestionsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-suggestions',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/suggestions/suggestions.html"*/'<ion-header>\n  <ion-navbar no-border-bottom>\n    <ion-navbar color="ionic">\n      <ion-title>Suggestions</ion-title>\n    </ion-navbar>\n  </ion-navbar>\n    <ion-item [(ngModel)]="searchType" name="searchType">        \n      <ion-label> <ion-icon name="search"></ion-icon></ion-label>\n      <ion-input clearInput type="text" placeholder="Food Type"></ion-input>\n    </ion-item>\n\n    <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n      <ion-list>\n        <ion-item *ngFor="let item of items">\n          {{ item }}\n        </ion-item>\n      </ion-list>-->\n    <ion-searchbar autocorrect="off" autocapitalize="off" spellcheck="off" #searchbar placeholder="Search..." class="search-box"></ion-searchbar>\n\n    <!--<ion-item [(ngModel)]="address" name="address">        \n      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n      <ion-input  clearInput type="text" placeholder="Current Location"></ion-input>\n    </ion-item>-->\n\n    \n    <!--<ion-searchbar\n      [(ngModel)]="searchType"\n      name="searchType"\n      [showCancelButton]="shouldShowCancel"\n      (ionInput)="onInput($event)"\n      (ionCancel)="onCancel($event)">\n    </ion-searchbar>-->\n    <!--<ion-select [(ngModel)]="Location" name="Location">\n    <ion-option>\n      Get your location\n    </ion-option>\n    </ion-select>-->\n    <button id="search" ion-button outline color="royal" block (click)="render()">\n        Search\n    </button>\n\n    <ion-row>\n        <ion-col width-15> \n          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged(\'distance\')">\n            Distance\n          </button>\n        </ion-col>\n        <ion-col width-15>\n          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged(\'calories\')">\n            Calories\n          </button>\n        </ion-col>\n        <ion-col width-15> \n            <button value="rate" ion-button outline color="royal" block (click)="onSegmentChanged(\'rate\')">\n            Rate\n            </button>\n          </ion-col>\n          <ion-col width-15>\n            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged(\'price\')">\n            Price\n            </button>\n          </ion-col>\n      </ion-row>\n    <!--\n    <ion-toolbar no-border-top>\n        <ion-segment [(ngModel)]="standard" name ="standard" (change)="onSegmentChanged($event)">\n          <ion-segment-button value="distance">\n            Distance\n          </ion-segment-button>\n          <ion-segment-button value="calories">\n            Calories\n          </ion-segment-button>\n          <ion-segment-button value="taste">\n            Taste\n          </ion-segment-button>\n          <ion-segment-button value="price">\n            Price\n          </ion-segment-button>\n        </ion-segment>\n      </ion-toolbar>\n    -->\n</ion-header>\n\n<ion-content>\n    <!--<ion-card *ngFor="let food of foodArray" (tap)="showDetails(food)">\n      <img [src]=\'food.image\'>\n      <ion-card-content>        \n        <ion-card-title>\n            {{food.type}}          {{food.distance}} mile\n        </ion-card-title>\n        <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n      </ion-card-content>\n    </ion-card>  -->\n\n    <ion-list>\n      <ion-item *ngFor="let food of foodArray" (tap)="showDetails(food)" text-wrap detail-none>\n        <ion-grid>\n          <ion-row>\n            <ion-col width-25>\n              <img [src]=\'food.image\'>\n            </ion-col>\n            <ion-col>\n              <h2> {{food.type}} </h2>\n              <p>\n                  <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, food)}"></ion-icon>\n                  <!--<ion-item>\n                      <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>\n                      <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>\n                    </ion-item>-->\n                    \n                  {{food.reviewCount}} Reviews\n              </p>\n              <p>{{food.address}}</p>\n              <p>{{food.calories}} kcal</p>\n              <p>You need to wait {{food.waitingTime}}min</p>\n            </ion-col>\n            <ion-col width-20 text-right>\n              <p>{{food.distance}}mi.</p>\n\n              <p> ${{food.price}}</p>\n              <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->\n            </ion-col>\n          </ion-row>\n        </ion-grid>      \n      </ion-item>\n    </ion-list>\n\n</ion-content>\n\n<!--\n<ion-content>\n    <ion-list>\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n  </ion-content>\n-->\n  <!--\n    <div [ngSwitch]="standard">\n    <ion-list *ngSwitchCase="\'distance\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'calories\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'taste\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'taste\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    </div>\n  -->'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/suggestions/suggestions.html"*/
+            selector: 'page-suggestions',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/suggestions/suggestions.html"*/'<ion-header>\n  <ion-navbar no-border-bottom>\n    <ion-navbar color="ionic">\n      <ion-title>Suggestions</ion-title>\n    </ion-navbar>\n  </ion-navbar>\n    <ion-item [(ngModel)]="searchType" name="searchType">        \n      <ion-label> <ion-icon name="search"></ion-icon></ion-label>\n      <ion-input clearInput type="text" placeholder="Food Type"></ion-input>\n    </ion-item>\n\n    <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n      <ion-list>\n        <ion-item *ngFor="let item of items">\n          {{ item }}\n        </ion-item>\n      </ion-list>-->\n    <ion-searchbar autocorrect="off" autocapitalize="off" spellcheck="off" #searchbar placeholder="Search..." class="search-box"></ion-searchbar>\n\n    <!--<ion-item [(ngModel)]="address" name="address">        \n      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n      <ion-input  clearInput type="text" placeholder="Current Location"></ion-input>\n    </ion-item>-->\n\n    \n    <!--<ion-searchbar\n      [(ngModel)]="searchType"\n      name="searchType"\n      [showCancelButton]="shouldShowCancel"\n      (ionInput)="onInput($event)"\n      (ionCancel)="onCancel($event)">\n    </ion-searchbar>-->\n    <!--<ion-select [(ngModel)]="Location" name="Location">\n    <ion-option>\n      Get your location\n    </ion-option>\n    </ion-select>-->\n    <button id="search" ion-button outline color="royal" block (click)="render()">\n        Search\n    </button>\n\n    <ion-row>\n        <ion-col width-15> \n          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged(\'distance\')">\n            Distance\n          </button>\n        </ion-col>\n        <ion-col width-15>\n          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged(\'calories\')">\n            Calories\n          </button>\n        </ion-col>\n        <ion-col width-15> \n            <button value="rate" ion-button outline color="royal" block (click)="onSegmentChanged(\'rate\')">\n            Rate\n            </button>\n          </ion-col>\n          <ion-col width-15>\n            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged(\'price\')">\n            Price\n            </button>\n          </ion-col>\n      </ion-row>\n    <!--\n    <ion-toolbar no-border-top>\n        <ion-segment [(ngModel)]="standard" name ="standard" (change)="onSegmentChanged($event)">\n          <ion-segment-button value="distance">\n            Distance\n          </ion-segment-button>\n          <ion-segment-button value="calories">\n            Calories\n          </ion-segment-button>\n          <ion-segment-button value="taste">\n            Taste\n          </ion-segment-button>\n          <ion-segment-button value="price">\n            Price\n          </ion-segment-button>\n        </ion-segment>\n      </ion-toolbar>\n    -->\n</ion-header>\n\n<ion-content>\n    <!--<ion-card *ngFor="let food of foodArray" (tap)="showDetails(food)">\n      <img [src]=\'food.image\'>\n      <ion-card-content>        \n        <ion-card-title>\n            {{food.type}}          {{food.distance}} mile\n        </ion-card-title>\n        <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n      </ion-card-content>\n    </ion-card>  -->\n\n    <ion-list>\n      <ion-item *ngFor="let food of foodArray" (tap)="showDetails(food)" text-wrap detail-none>\n        <ion-grid>\n          <ion-row>\n            <ion-col width-25>\n              <img [src]=\'food.image\'>\n            </ion-col>\n            <ion-col>\n              <h2> {{food.type}} </h2>\n              <p>\n                  <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, food)}"></ion-icon>\n                  <!--<ion-item>\n                      <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>\n                      <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>\n                      <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>\n                      <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>\n                    </ion-item>-->\n                    \n                  {{food.reviewCount}} Reviews\n              </p>\n              <p>{{food.address}}</p>\n              <p>{{food.calories}} kcal</p>\n              <p>You need to wait {{food.waitingTime}}min</p>\n            </ion-col>\n            <ion-col width-20 text-right>\n              <p>{{food.distance}}mi.</p>\n\n              <p> ${{food.price}}</p>\n              <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->\n            </ion-col>\n          </ion-row>\n        </ion-grid>      \n      </ion-item>\n    </ion-list>\n\n</ion-content>\n\n<!--\n<ion-content>\n    <ion-list>\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n  </ion-content>\n-->\n  <!--\n    <div [ngSwitch]="standard">\n    <ion-list *ngSwitchCase="\'distance\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'calories\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'taste\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'taste\'">\n        <ion-item *ngFor="let food of foodArray">\n          <ion-thumbnail item-start>\n            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">\n          </ion-thumbnail>\n          <h2>{{food.type}}</h2>\n          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>\n        </ion-item>\n    </ion-list>\n\n    </div>\n  -->'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/suggestions/suggestions.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */],
@@ -810,17 +868,17 @@ var SuggestionsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 352:
+/***/ 456:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeoService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(2);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -919,20 +977,20 @@ var GeoService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 353:
+/***/ 457:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DiscoverPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1160,7 +1218,7 @@ var DiscoverPage = /** @class */ (function () {
     };
     DiscoverPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-discover',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/discover/discover.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Discover\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n  <form id="discover-form3">\n    <ion-item [(ngModel)]="address" name="address">        \n      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n      <ion-input clearInput type="text" placeholder="Current Location"></ion-input>\n    </ion-item>\n\n    <!--<ion-item id="discover-select3">\n      <ion-label>\n        ChooseImage\n      </ion-label>\n      <ion-select name="ChooseImage" [(ngModel)]="ChooseImage">\n        <ion-option>\n          Open Camera\n        </ion-option>\n        <ion-option>\n          Choose from Gallery\n        </ion-option>\n      </ion-select>\n    </ion-item> -->\n    <button id="discover-button7" ion-button outline color="royal" block (click)="openCamera()">\n      Open Camera\n    </button>\n    <button id="discover-button8" ion-button outline color="royal" block (click)="openGallery()">\n      Open Gallery\n    </button>\n    <img [src]="base64Image" [hidden]="!base64Image"/>\n    <!--<button id="discover-button8" ion-button outline color="royal" block (click)="upLoadImage()">\n      <ion-icon name="camera"></ion-icon>\n      Upload Image\n    </button>-->\n    \n    <ion-item id="discover-select7">\n      <ion-label>\n        Food Type\n      </ion-label>\n      <ion-select [(ngModel)]="type" name="type">\n        <ion-option>\n          🍔hamburger\n        </ion-option>\n        <ion-option>\n          🥗salad\n        </ion-option>\n        <ion-option>\n          🍟french fries\n        </ion-option>\n        <ion-option>\n          🍣sushi\n        </ion-option>\n        <ion-option>\n          🍲soup\n        </ion-option>\n        <ion-option>\n          🍜noodles\n        </ion-option>\n      </ion-select>\n    </ion-item>\n\n    <!--<ion-item id="discover-select6">\n      <ion-label>\n        Waiting Time\n      </ion-label>\n      <ion-select [(ngModel)]="WaitingTime" name="WaitingTime">\n        <ion-option>\n          1-5 min\n        </ion-option>\n        <ion-option>\n          6-15 min\n        </ion-option>\n        <ion-option>\n          above 15 min\n        </ion-option>\n      </ion-select>\n    </ion-item>-->\n    <ion-item [(ngModel)]="waitingTime" name="waitingTime">\n        <ion-label color="primary" floating>waitingTime(min)</ion-label>\n        <ion-input></ion-input>\n    </ion-item>\n\n      <ion-item [(ngModel)]="calories" name="calories">\n          <ion-label color="primary" floating>Calories(kcal)</ion-label>\n          <ion-input></ion-input>\n      </ion-item>\n\n      <ion-item [(ngModel)]="price" name="price">\n          <ion-label color="primary" floating>Price($)</ion-label>\n          <ion-input></ion-input>\n      </ion-item>\n\n      \n    \n  </form>\n  <button id="discover-button8" ion-button outline color="royal" block (click)="storeFood()">\n    Finish\n  </button>\n</ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/discover/discover.html"*/
+            selector: 'page-discover',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/discover/discover.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Discover\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n  <form id="discover-form3">\n    <ion-item [(ngModel)]="address" name="address">        \n      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n      <ion-input clearInput type="text" placeholder="Current Location"></ion-input>\n    </ion-item>\n\n    <!--<ion-item id="discover-select3">\n      <ion-label>\n        ChooseImage\n      </ion-label>\n      <ion-select name="ChooseImage" [(ngModel)]="ChooseImage">\n        <ion-option>\n          Open Camera\n        </ion-option>\n        <ion-option>\n          Choose from Gallery\n        </ion-option>\n      </ion-select>\n    </ion-item> -->\n    <button id="discover-button7" ion-button outline color="royal" block (click)="openCamera()">\n      Open Camera\n    </button>\n    <button id="discover-button8" ion-button outline color="royal" block (click)="openGallery()">\n      Open Gallery\n    </button>\n    <img [src]="base64Image" [hidden]="!base64Image"/>\n    <!--<button id="discover-button8" ion-button outline color="royal" block (click)="upLoadImage()">\n      <ion-icon name="camera"></ion-icon>\n      Upload Image\n    </button>-->\n    \n    <ion-item id="discover-select7">\n      <ion-label>\n        Food Type\n      </ion-label>\n      <ion-select [(ngModel)]="type" name="type">\n        <ion-option>\n          🍔hamburger\n        </ion-option>\n        <ion-option>\n          🥗salad\n        </ion-option>\n        <ion-option>\n          🍟french fries\n        </ion-option>\n        <ion-option>\n          🍣sushi\n        </ion-option>\n        <ion-option>\n          🍲soup\n        </ion-option>\n        <ion-option>\n          🍜noodles\n        </ion-option>\n      </ion-select>\n    </ion-item>\n\n    <!--<ion-item id="discover-select6">\n      <ion-label>\n        Waiting Time\n      </ion-label>\n      <ion-select [(ngModel)]="WaitingTime" name="WaitingTime">\n        <ion-option>\n          1-5 min\n        </ion-option>\n        <ion-option>\n          6-15 min\n        </ion-option>\n        <ion-option>\n          above 15 min\n        </ion-option>\n      </ion-select>\n    </ion-item>-->\n    <ion-item [(ngModel)]="waitingTime" name="waitingTime">\n        <ion-label color="primary" floating>waitingTime(min)</ion-label>\n        <ion-input></ion-input>\n    </ion-item>\n\n      <ion-item [(ngModel)]="calories" name="calories">\n          <ion-label color="primary" floating>Calories(kcal)</ion-label>\n          <ion-input></ion-input>\n      </ion-item>\n\n      <ion-item [(ngModel)]="price" name="price">\n          <ion-label color="primary" floating>Price($)</ion-label>\n          <ion-input></ion-input>\n      </ion-item>\n\n      \n    \n  </form>\n  <button id="discover-button8" ion-button outline color="royal" block (click)="storeFood()">\n    Finish\n  </button>\n</ion-content>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/discover/discover.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */],
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__["a" /* Geolocation */],
@@ -1173,18 +1231,20 @@ var DiscoverPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 355:
+/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__details_details__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__details_details__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_echarts__ = __webpack_require__(868);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_echarts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_echarts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1201,8 +1261,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SettingsPage = /** @class */ (function () {
-    // records = new Array(2);
     function SettingsPage(navCtrl, http, changeDetectorRef) {
         this.navCtrl = navCtrl;
         this.http = http;
@@ -1228,6 +1288,7 @@ var SettingsPage = /** @class */ (function () {
     SettingsPage.prototype.render = function () {
         console.log("enter render");
         this.getData();
+        this.loadFigure();
     };
     SettingsPage.prototype.apiRequest = function () {
         var getUrl = 'http://' + this.localhost + ':3000/users?username=' + __WEBPACK_IMPORTED_MODULE_3__global__["a" /* global */].currentUser;
@@ -1251,10 +1312,19 @@ var SettingsPage = /** @class */ (function () {
         this.user.name = res.username;
         this.user.image = res.profile_image;
         this.user.calories = res.calories;
+        this.records = res.calories;
+        // this.formNumberArray(res.calories);
         this.user.points = res.points;
         this.user.records = this.formatFoodArray(res.favorates);
         console.log(this.user);
         return res;
+    };
+    SettingsPage.prototype.formNumberArray = function (data) {
+        for (var i in data) {
+            this.records.push(Number(data[i]));
+        }
+        console.log('record 111');
+        console.log(this.records);
     };
     SettingsPage.prototype.formatFoodArray = function (res) {
         console.log('---here is resuslt');
@@ -1272,28 +1342,61 @@ var SettingsPage = /** @class */ (function () {
     SettingsPage.prototype.showDetails = function (food) {
         console.log("before pushing");
         console.log(food);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__details_details__["a" /* Details */], food);
+        var param = { sLati: __WEBPACK_IMPORTED_MODULE_3__global__["a" /* global */].latitude,
+            sLong: __WEBPACK_IMPORTED_MODULE_3__global__["a" /* global */].longitude,
+            dLati: food.coordinates[1],
+            dLong: food.coordinates[0],
+            foodObj: food };
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__details_details__["a" /* Details */], param);
+    };
+    // ionViewDidLoad() {
+    SettingsPage.prototype.loadFigure = function () {
+        console.log('view did load');
+        console.log(this.records);
+        var ec = __WEBPACK_IMPORTED_MODULE_6_echarts__;
+        var container = document.getElementById('chart');
+        var chart = ec.init(container);
+        var option = {
+            title: {
+                text: 'calorie week chart'
+            },
+            tooltip: {},
+            // legend: {
+            //     data:['calorie']
+            // },
+            xAxis: {
+                data: ["Mon", "Tue", "Wed", "Thu", "Fir", "Sat", "Sun"]
+            },
+            yAxis: {},
+            series: [{
+                    name: 'calorie',
+                    type: 'bar',
+                    data: this.records,
+                }]
+        };
+        chart.setOption(option);
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar no-border-bottom>\n      <h1 class="title">Ionic Profile</h1>\n    </ion-navbar>\n</ion-header>\n\n    <ion-content>\n      <div class="list card">\n        <ion-item class="profile-item">\n          <div class="profile-picture big-profile-picture">\n            <img src="{{user.image}}">\n          </div>\n          <h2 class="profile-name dark">{{user.name}}</h2>\n          <h4>\n            Calories: {{user.calories}}  |  Points: {{user.points}}\n          </h4>\n          <!-- <h2 class="profile-name dark">{{user.calories}}</h2>\n          <h2 class="profile-name dark">{{user.points}}</h2> -->\n\n        </ion-item>\n      </div>\n\n      <ion-list>\n        <ion-item *ngFor="let food of user.records" (tap)="showDetails(food)" text-wrap detail-none>\n          <ion-grid>\n            <ion-row>\n              <ion-col width-25>\n                <img [src]=\'food.image\'>\n              </ion-col>\n              <ion-col>\n                <h2> {{food.type}} </h2>\n                <p>\n                    <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, food)}"></ion-icon>\n                    <!--<ion-item>\n                        <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>\n                        <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>\n                      </ion-item>-->\n                      \n                    {{food.reviewCount}} Reviews\n                </p>\n                <p>{{food.address}}</p>\n              </ion-col>\n              <ion-col width-20 text-right>\n                <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->\n              </ion-col>\n            </ion-row>\n          </ion-grid>      \n        </ion-item>\n      </ion-list>\n      <!--\n      <ion-list>\n          <ion-item *ngFor="let record of records" (tap)="showDetails(record)" text-wrap detail-none>\n            <ion-grid>\n              <ion-row>\n                <ion-col width-25>\n                  <img [src]=\'record.image\'>\n                </ion-col>\n                <ion-col>\n                  <h2> {{record.type}} </h2>\n                  <p>\n                      <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, record)}"></ion-icon>\n                      {{record.reviewCount}} Reviews\n                  </p>\n                  <p>{{record.address}}</p>\n                  <p>{{record.waitingTime}}</p>\n                </ion-col>\n                <ion-col width-20 text-right>\n                  <p>{{record.distance}}mi.</p>\n                  <p> ${{record.distance}}</p>\n                </ion-col>\n              </ion-row>\n            </ion-grid>      \n          </ion-item>\n        </ion-list>\n      -->\n    </ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/settings/settings.html"*/
+            selector: 'page-settings',template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar no-border-bottom>\n      <h1 class="title">Ionic Profile</h1>\n    </ion-navbar>\n</ion-header>\n\n    <ion-content>\n      <div class="list card">\n        <ion-item class="profile-item">\n          <div class="profile-picture big-profile-picture">\n            <img src="{{user.image}}">\n          </div>\n          <h2 class="profile-name dark">{{user.name}}</h2>\n          <h4>\n            Calories: {{user.calories}}  |  Points: {{user.points}}\n          </h4>\n          <!-- <h2 class="profile-name dark">{{user.calories}}</h2>\n          <h2 class="profile-name dark">{{user.points}}</h2> -->\n\n        </ion-item>\n      </div>\n\n      <div id="chart" style="width:100%;height:250px;"></div>\n      <ion-list>\n        <ion-item *ngFor="let food of user.records" (tap)="showDetails(food)" text-wrap detail-none>\n          <ion-grid>\n            <ion-row>\n              <ion-col width-25>\n                <img [src]=\'food.image\'>\n              </ion-col>\n              <ion-col>\n                <h2> {{food.type}} </h2>\n                <p>\n                    <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, food)}"></ion-icon>\n                    <!--<ion-item>\n                        <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>\n                        <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>\n                        <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>\n                        <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>\n                      </ion-item>-->\n                      \n                    {{food.reviewCount}} Reviews\n                </p>\n                <p>{{food.address}}</p>\n              </ion-col>\n              <ion-col width-20 text-right>\n                <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->\n              </ion-col>\n            </ion-row>\n          </ion-grid>      \n        </ion-item>\n      </ion-list>\n      <!--\n      <ion-list>\n          <ion-item *ngFor="let record of records" (tap)="showDetails(record)" text-wrap detail-none>\n            <ion-grid>\n              <ion-row>\n                <ion-col width-25>\n                  <img [src]=\'record.image\'>\n                </ion-col>\n                <ion-col>\n                  <h2> {{record.type}} </h2>\n                  <p>\n                      <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{\'active\': isActive(i, record)}"></ion-icon>\n                      {{record.reviewCount}} Reviews\n                  </p>\n                  <p>{{record.address}}</p>\n                  <p>{{record.waitingTime}}</p>\n                </ion-col>\n                <ion-col width-20 text-right>\n                  <p>{{record.distance}}mi.</p>\n                  <p> ${{record.distance}}</p>\n                </ion-col>\n              </ion-row>\n            </ion-grid>      \n          </ion-item>\n        </ion-list>\n      -->\n    </ion-content>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/pages/settings/settings.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]) === "function" && _c || Object])
     ], SettingsPage);
     return SettingsPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=settings.js.map
 
 /***/ }),
 
-/***/ 357:
+/***/ 539:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(540);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(544);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1301,34 +1404,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 362:
+/***/ 544:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_suggestions_suggestions__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_discover_discover__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_settings_settings__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_details_details__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_signIn_signIn__ = __webpack_require__(256);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(686);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_http__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_splash_screen__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_camera__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_file_transfer__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_geolocation__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_native_geocoder__ = __webpack_require__(687);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_file__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_in_app_browser__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic2_rating__ = __webpack_require__(688);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_geo_service__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_suggestions_suggestions__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_discover_discover__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_settings_settings__ = __webpack_require__(459);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_details_details__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_signIn_signIn__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(1167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_http__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_status_bar__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_splash_screen__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_camera__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_file_transfer__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_geolocation__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_native_geocoder__ = __webpack_require__(1168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_file__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_in_app_browser__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic2_rating__ = __webpack_require__(1169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_geo_service__ = __webpack_require__(456);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1415,16 +1518,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 399:
+/***/ 581:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1452,7 +1555,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/app/app.html"*/'<ion-nav #mainContent [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/app/app.html"*/'<ion-nav #mainContent [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1463,57 +1566,19 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 57:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return global; });
 var global = {
     currentUser: "",
+    latitude: 0,
+    longitude: 0,
 };
 //# sourceMappingURL=global.js.map
 
-/***/ }),
-
-/***/ 686:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(138);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage.prototype.skipIntroHandler = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Home\n    </ion-title>\n  </ion-navbar>\n</ion-header>'/*ion-inline-end:"/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
 /***/ })
 
-},[357]);
+},[539]);
 //# sourceMappingURL=main.js.map

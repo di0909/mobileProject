@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 import { ChangeDetectorRef } from "@angular/core";
 import { ApplicationRef } from '@angular/core';
 import { GeoService } from '../../providers/geo-service';
+import {global} from '../global';
 
 declare var google;
 @Component({
@@ -135,7 +136,7 @@ export class SuggestionsPage {
 
       // res[i]['reviewCount'] = res[1].; 
       res[i]['foodId'] = res[i]._id;
-      console.log(res[i]);
+      // console.log(res[i]);
 
     }
     return res;
@@ -186,12 +187,14 @@ export class SuggestionsPage {
 
 
   getCurrentPosition() {
-    console.log("enter getCurrentPosition");
+    // console.log("enter getCurrentPosition");
     this.geolocation.getCurrentPosition().then((resp) => {
     this.latitude = resp.coords.latitude;
     this.longitude = resp.coords.longitude;
-    console.log(resp.coords.latitude);
-    console.log(resp.coords.longitude);
+    // console.log(resp.coords.latitude);
+    // console.log(resp.coords.longitude);
+    global.latitude = Number(this.latitude);
+    global.longitude = Number(this.longitude);
 
     this.geocodelatLng((address) => {
       this.address = address;
@@ -217,7 +220,7 @@ export class SuggestionsPage {
     this.geocoder.geocode({ 'latLng': latLng}, function (results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         var address = results[0].formatted_address;
-        console.log(address); 
+        // console.log(address); 
         callback(address);
       }
       else {
@@ -254,11 +257,15 @@ export class SuggestionsPage {
   }
 
   isActive(index, food) {
-    //console.log(index);
-    if (2 >= index) {
+    // console.log(index);
+    // console.log(food.rate);
+    if (food.rate >= index) {
+      console.log('true');
       return true;
+    } else {
+      console.log('false');
+      return false;
     }
-    return false;
   }
 
   showDetails(food) {
@@ -267,7 +274,8 @@ export class SuggestionsPage {
     var param = {sLati:this.latitude,
                 sLong:this.longitude,
                 dLati:food.coordinates[1],
-                dLong:food.coordinates[0]}
+                dLong:food.coordinates[0],
+                foodObj:food}
     this.navCtrl.push(Details, param);
   }
 

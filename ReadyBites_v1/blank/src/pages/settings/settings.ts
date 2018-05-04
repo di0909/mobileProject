@@ -5,6 +5,7 @@ import {global} from '../global';
 import { Observable } from 'rxjs';
 import { ChangeDetectorRef } from "@angular/core";
 import { Details } from '../details/details';
+import * as echarts from 'echarts';
 
 @Component({
   selector: 'page-settings',
@@ -16,7 +17,7 @@ export class SettingsPage {
   localhost = "localhost";
   // user:any;
   user = {image:"", name:"di wang", calories:"100", points:"10", records:[{image: ""}]}
-  // records = new Array(2);
+  records: any;
 
   constructor(public navCtrl: NavController, public http: Http, private changeDetectorRef: ChangeDetectorRef,) {
     // console.log('settings controll');
@@ -36,6 +37,7 @@ export class SettingsPage {
   render() {
     console.log("enter render");
     this.getData();
+    this.loadFigure();
   }
 
   apiRequest() : Observable<any> {
@@ -71,10 +73,19 @@ export class SettingsPage {
     this.user.name = res.username;
     this.user.image = res.profile_image;
     this.user.calories = res.calories;
+    this.records = res.calories;
+    // this.formNumberArray(res.calories);
     this.user.points = res.points;
     this.user.records = this.formatFoodArray(res.favorates);
     console.log(this.user);
     return res;
+  }
+  formNumberArray(data) {
+    for (var i in data) {
+      this.records.push(Number(data[i]));
+    }
+    console.log('record 111')
+    console.log(this.records);
   }
   formatFoodArray(res) {
     console.log('---here is resuslt');
@@ -95,10 +106,41 @@ export class SettingsPage {
   showDetails(food) {
     console.log("before pushing");
     console.log(food);
-    
-    this.navCtrl.push(Details, food);
+    var param = {sLati:global.latitude,
+                sLong:global.longitude,
+                dLati:food.coordinates[1],
+                dLong:food.coordinates[0],
+                foodObj:food}
+    this.navCtrl.push(Details, param);
   }
 
+  // ionViewDidLoad() {
+    loadFigure() {  
+    console.log('view did load');
+    console.log(this.records);
+    const ec = echarts as any;
+    const container = document.getElementById('chart');
+    const chart = ec.init(container);
+    let option = {
+      title: {
+          text: 'calorie week chart'
+      },
+      tooltip: {},
+      // legend: {
+      //     data:['calorie']
+      // },
+      xAxis: {
+          data: ["Mon","Tue","Wed","Thu","Fir","Sat","Sun"]
+      },
+      yAxis: {},
+      series: [{
+          name: 'calorie',
+          type: 'bar',
+          data: this.records,
+      }]
+  };
+    chart.setOption(option);
+  }
 
 }
 

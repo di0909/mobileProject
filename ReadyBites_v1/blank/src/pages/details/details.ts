@@ -23,6 +23,7 @@ export class Details {
   marker: any;
 
   food: any;
+  inputData: any;
   reviewScore: Number;
   //stars: Array<any> = new Array(5);
   @ViewChild('map') mapRef: ElementRef;
@@ -32,12 +33,15 @@ export class Details {
               public alertCtrl: AlertController,
               public inAppBrowser: InAppBrowser,
               public http: Http,) {
-    this.food = this.navParams.data;
-    this.sLati =  this.food.sLati;
-    this.sLong = this.food.sLong;
-    this.dLati = this.food.dLati;
-    this.dLong = this.food.dLong;
-    alert(this.food);
+    this.inputData = this.navParams.data;
+    console.log('food');
+    console.log(this.inputData );
+    this.sLati =  this.inputData.sLati;
+    this.sLong = this.inputData.sLong;
+    this.dLati = this.inputData.dLati;
+    this.dLong = this.inputData.dLong;
+    this.food = this.inputData.foodObj;
+    alert(this.inputData);
   }
   doConfirm() {
     let confirm = this.alertCtrl.create({
@@ -135,11 +139,16 @@ export class Details {
     console.log('before login');
     this.http.post(postUrl, this.toparams(data), options)
     .subscribe((res: Response) => {
+      this.refresh();
       alert("success");
     }, (err) => {
     // error
       alert("error"+JSON.stringify(err));
     });
+
+  }
+  refresh() {
+    console.log("enter refresh");
 
   }
 
