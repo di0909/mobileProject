@@ -87,7 +87,9 @@ router.post("/login", function(req, res, next) {
         console.log('up is user');
         console.log(message);
 
-        if (err) { return next(err) }
+        if (err) { 
+            return res.status(404).send(err);
+         }
         if (!user) {
             return res.status(401).send(message);
             // return res.redirect("/login");
@@ -95,7 +97,9 @@ router.post("/login", function(req, res, next) {
 
         // make passportjs setup the user object, serialize the user, ...
         req.login(user, {}, function(err) {
-            if (err) { return next(err) };
+            if (err) { 
+                return res.status(404).send(err); 
+            };
             // send username to chat page
             req.session.username = user.username;
             return res.status(200).send(user);
