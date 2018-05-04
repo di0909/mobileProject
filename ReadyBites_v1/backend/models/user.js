@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+const Food = require('../models/food');
+const Schema = mongoose.Schema;
 
 var UserSchema = new mongoose.Schema({
     username: {
@@ -11,9 +13,22 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    calories: [{
+        type: Number,
+        default: 0,
+    }],
+    points: {
+        type: Number,
+        default: 0,
+    },
     profile_image: {
         type: String
     },
+    favorates:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Food',
+    }],
+
     gender: {
         type: String,
         enum: ['female', 'male', 'other', 'undefined'],

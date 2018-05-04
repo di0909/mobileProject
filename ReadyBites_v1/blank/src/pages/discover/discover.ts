@@ -5,6 +5,7 @@ import { Http, RequestOptions, Headers, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { Geolocation } from '@ionic-native/geolocation';
+import {global} from '../global';
 //import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 declare var google;
@@ -123,6 +124,7 @@ export class DiscoverPage {
         //alert(res.json());
         //this.foodId = res.text();
         this.uploadImage(this.foodId);
+        this.addScore();
         alert("success");
       }, (err) => {
         // error
@@ -203,5 +205,25 @@ export class DiscoverPage {
           this.sendData();
         }
       );
+  }
+
+  addScore() {
+    console.log('start add score');
+    var data = {
+      'username':global.currentUser,
+      'score':1,
+    };
+    console.log(data);
+
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    let options = new RequestOptions({ headers: headers });
+    let postUrl = "http://" + this.localhost + ":3000/users/addscore";
+    this.http.post(postUrl, this.toparams(data), options)
+      .subscribe((res: Response) => {
+        alert("success");
+      }, (err) => {
+        // error
+        alert("error"+JSON.stringify(err));
+      });
   }
 }

@@ -25779,6 +25779,20 @@ page-settings .record h3 {
   margin-bottom: 15px;
 }
 
+page-settings img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+page-settings ion-icon[name="logo-usd"],
+page-settings ion-icon[name="logo-euro"] {
+  font-size: 11px;
+  color: #999999;
+}
+
 page-suggestions img {
   width: 75px;
   height: 75px;

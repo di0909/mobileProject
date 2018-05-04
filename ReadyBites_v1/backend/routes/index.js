@@ -3,6 +3,7 @@ var router = express.Router();
 var passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
+var Food = require('../models/food');
 var bcrypt = require('bcryptjs');
 
 router.get('/register', function(req, res, next) {
@@ -145,22 +146,82 @@ router.get('/logout', function(req, res) {
     res.redirect('/login');
 });
 
+router.post('/users/favorate', function(req, res, next) {
+    var username = req.body.username;
+    var foodId = req.body.foodId;
+    User.findOne({username: username}).exec(function(err, user) {
+        if(err)
+            return console.log(err);
+        console.log(user);
+        Food.findOne({_id: foodId}).exec(function(err, food) {
+            if(err) {
+                return console.log(err);
+            }
+            user.favorates.push(food);
+            console.log('add user favorate');
+            console.log(user);
+            res.status(200).json(user.save());
+        });
+      });
+});
+
+router.get('/users', function(req, res, next) {
+    var username = req.query.username;
+    console.log(username);
+    //where 1 is ascending and -1 is desceding.
+  
+    User.findOne({username: username}).populate('favorates').exec(function(err, user) {
+      if(err)
+          return console.log(err);
+      console.log(user);
+      res.status(200).json(user);
+    });
+  });
+router.post('/users/addscore', function(req, res, next) {
+    var username = req.body.username;
+    var score = req.body.score;
+    User.findOne({username: username}).exec(function(err, user) {
+        if(err)
+            return console.log(err);
+        console.log(user);
+        user.points = user.points + Number(score);
+        res.status(200).json(user.save());
+      });
+});
+router.post('/users/addCalories', function(req, res, next) {
+    var username = req.body.username;
+    var calory = req.body.calory;
+    User.findOne({username: username}).exec(function(err, user) {
+        if(err) {
+            return console.log(err);
+        }
+        user.calories.push(Number(calory));
+        console.log('add user calories');
+        console.log(user);
+        res.status(200).json(user.save());
+      });
+});
+
+router.post('/updateRateScore', function(req, res, next) {
+    var foodId = req.body.foodId;
+    var rateScore = req.body.rate;
+
+    Food.findOne({_id: foodId}).exec(function(err, food) {
+        if(err) {
+            return console.log(err);
+        }
+        food.totalRate = food.totalRate + Number(rateScore);
+        food.rateCount = food.rateCount + 1;
+        food.rate = food.totalRate/food.rateCount;
+        res.status(200).json(food.save());
+    });
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-// router.get('/users/:username', function(req, res, next) {
-//   var username = req.query.username;
-//   console.log(username);
-//   //where 1 is ascending and -1 is desceding.
 
-//   User.find({username: username}).exec(function(err, user) {
-//     if(err)
-//         return console.log(err);
-//     console.log(user);
-//     res.status(200).json(user);
-//   });
-// });
 
 module.exports = router;

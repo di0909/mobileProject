@@ -16,6 +16,43 @@
 
         </ion-item>
       </div>
+
+      <ion-list>
+        <ion-item *ngFor="let food of user.records" (tap)="showDetails(food)" text-wrap detail-none>
+          <ion-grid>
+            <ion-row>
+              <ion-col width-25>
+                <img [src]='food.image'>
+              </ion-col>
+              <ion-col>
+                <h2> {{food.type}} </h2>
+                <p>
+                    <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, food)}"></ion-icon>
+                    <!--<ion-item>
+                        <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>
+                        <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>
+                        <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>
+                        <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>
+                        <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>
+                        <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+                        <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
+                        <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
+                        <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
+                        <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
+                        <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>
+                      </ion-item>-->
+                      
+                    {{food.reviewCount}} Reviews
+                </p>
+                <p>{{food.address}}</p>
+              </ion-col>
+              <ion-col width-20 text-right>
+                <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->
+              </ion-col>
+            </ion-row>
+          </ion-grid>      
+        </ion-item>
+      </ion-list>
       <!--
       <ion-list>
           <ion-item *ngFor="let record of records" (tap)="showDetails(record)" text-wrap detail-none>
