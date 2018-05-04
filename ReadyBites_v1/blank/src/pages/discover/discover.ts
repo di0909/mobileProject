@@ -19,7 +19,10 @@ export class DiscoverPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   localhost = "localhost";
+<<<<<<< HEAD
+=======
 
+>>>>>>> c23f99f097fa9837dac0f7949accbc4de6fc6431
   fileTransfer: FileTransferObject = this.transfer.create();
   base64Image: any;
   foodId = 0;
