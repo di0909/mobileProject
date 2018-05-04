@@ -94,7 +94,21 @@
               <h2> {{food.type}} </h2>
               <p>
                   <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, food)}"></ion-icon>
-                {{food.reviewCount}} Reviews
+                  <!--<ion-item>
+                      <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>
+                      <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>
+                      <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>
+                      <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>
+                      <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>
+                      <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+                      <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>
+                    </ion-item>-->
+                    
+                  {{food.reviewCount}} Reviews
               </p>
               <p>{{food.address}}</p>
               <p>{{food.waitingTime}}</p>

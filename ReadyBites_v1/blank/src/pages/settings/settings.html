@@ -1,8 +1,45 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Settings
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar no-border-bottom>
+      <h1 class="title">Ionic Profile</h1>
+    </ion-navbar>
 </ion-header>
-<ion-content padding id="page4"></ion-content>
+
+    <ion-content>
+      <div class="list card">
+        <ion-item class="profile-item">
+          <div class="profile-picture big-profile-picture">
+            <img src="{{user.image}}">
+          </div>
+          <h2 class="profile-name dark">{{user.name}}</h2>
+          <h2 class="profile-name dark">{{user.calories}}</h2>
+          <h2 class="profile-name dark">{{user.points}}</h2>
+
+        </ion-item>
+      </div>
+      <!--
+      <ion-list>
+          <ion-item *ngFor="let record of records" (tap)="showDetails(record)" text-wrap detail-none>
+            <ion-grid>
+              <ion-row>
+                <ion-col width-25>
+                  <img [src]='record.image'>
+                </ion-col>
+                <ion-col>
+                  <h2> {{record.type}} </h2>
+                  <p>
+                      <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, record)}"></ion-icon>
+                      {{record.reviewCount}} Reviews
+                  </p>
+                  <p>{{record.address}}</p>
+                  <p>{{record.waitingTime}}</p>
+                </ion-col>
+                <ion-col width-20 text-right>
+                  <p>{{record.distance}}mi.</p>
+                  <p> ${{record.distance}}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>      
+          </ion-item>
+        </ion-list>
+      -->
+    </ion-content>

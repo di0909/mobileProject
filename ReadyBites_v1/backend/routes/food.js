@@ -24,7 +24,7 @@ router.get('/', function(req, res, next) {
 
 	myFood.find({}).where('coordinates').near({
 		center: [longitude,latitude],
-		maxDistance: 10*1000
+		maxDistance: 10
 	}).sort({standard: order}).limit(10).exec(function(err, foods) {
 		if(err)
 			return console.log(err);
