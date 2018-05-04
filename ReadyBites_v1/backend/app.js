@@ -25,6 +25,7 @@ var index = require('./routes/index');
 var image = require('./routes/image');
 var food = require('./routes/food');
 var suggestion = require('./routes/suggestion');
+var userImage = require('./routes/userImage');
 
 var app = express();
 
@@ -65,6 +66,7 @@ app.get('*', function(req, res, next){
     next();
 });
 //------
+app.use('/userImage', userImage);
 app.use('/food', food);
 app.use('/image', image);
 app.use('/', index);

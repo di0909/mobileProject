@@ -1,14 +1,15 @@
 <ion-header>
     <ion-navbar no-border-bottom>
-      <h1 class="title">Ionic Profile</h1>
+      <h1 class="title">{{user.name}}</h1>
     </ion-navbar>
 </ion-header>
 
     <ion-content>
-      <div class="list card">
+      <div>
         <ion-item class="profile-item">
-          <div class="profile-picture big-profile-picture">
-            <img src="{{user.image}}">
+          <div>
+              <img class = "circle-pic" [src]='user.image' (click)="openGallery()">
+            <!--<img src="{{user.image}}" ng-click="openGallery()">-->
           </div>
           <h2 class="profile-name dark">{{user.name}}</h2>
           <h4>

@@ -5,6 +5,8 @@ import {global} from '../global';
 import { Observable } from 'rxjs';
 import { ChangeDetectorRef } from "@angular/core";
 import { Details } from '../details/details';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 
 @Component({
   selector: 'page-settings',
@@ -13,12 +15,14 @@ import { Details } from '../details/details';
 export class SettingsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "localhost";
+  localhost = "128.237.169.188";
+  base64Image: any;
+  fileTransfer: FileTransferObject = this.transfer.create();
   // user:any;
   user = {image:"", name:"di wang", calories:"100", points:"10", records:[{image: ""}]}
   // records = new Array(2);
 
-  constructor(public navCtrl: NavController, public http: Http, private changeDetectorRef: ChangeDetectorRef,) {
+  constructor(public navCtrl: NavController, public http: Http, private changeDetectorRef: ChangeDetectorRef,private camera: Camera,private transfer: FileTransfer) {
     // console.log('settings controll');
     // console.log(global.currentUser);
     // let getUrl = 'http://' + this.localhost + ':3000/users?username=' + global.currentUser;
@@ -60,6 +64,7 @@ export class SettingsPage {
       (
         res => {
           this.formatUser(res);
+          console.log(this.user);
           this.changeDetectorRef.detectChanges();
         }
       );
@@ -70,10 +75,13 @@ export class SettingsPage {
     // console.log(res);
     this.user.name = res.username;
     this.user.image = res.profile_image;
+    //if (!this.user.image) {
+      this.user.image = 'http://' + this.localhost + ':3000/userImage?id=' + this.user.name;
+    //}
     this.user.calories = res.calories;
     this.user.points = res.points;
     this.user.records = this.formatFoodArray(res.favorates);
-    console.log(this.user);
+    //console.log(this.user);
     return res;
   }
   formatFoodArray(res) {
@@ -100,5 +108,46 @@ export class SettingsPage {
   }
 
 
+  openGallery() {
+    console.log("enter openGallery");
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+    }
+    
+    this.camera.getPicture(options).then((imageData) => {
+    // imageData is either a base64 encoded string or a file URI
+    // If it's base64:
+    this.base64Image = 'data:image/jpeg;base64,' + imageData;
+    console.log(this.base64Image);
+    this.uploadImage(this.user.name);
+    }, (err) => {
+    // Handle error
+    });
+  }
+
+  uploadImage(username) {   
+    /*let options = {
+      quality: 100
+    };*/
+    let options1: FileUploadOptions = {
+      fileKey: 'file',
+      fileName: username,
+      headers: {}
+    }
+    this.fileTransfer.upload(this.base64Image, 'http://' + this.localhost + ':3000/userImage', options1)
+      .then((data) => {
+        // success
+        alert("upload image success");
+        this.user.image = 'http://' + this.localhost + ':3000/userImage?id=' + this.user.name;
+        this.changeDetectorRef.detectChanges();
+      }, (err) => {
+        // error
+        alert("upload image error"+JSON.stringify(err));
+      });
+  }
 }
 
