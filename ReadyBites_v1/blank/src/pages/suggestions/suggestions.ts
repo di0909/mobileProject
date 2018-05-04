@@ -27,6 +27,7 @@ export class SuggestionsPage {
   geocoder = new google.maps.Geocoder();
 
   stars = new Array(5);
+  //myRating = 1.5;
   //usds: Array<any>;
 
   // this tells the tabs component which Pages
@@ -71,6 +72,11 @@ export class SuggestionsPage {
   }
 
   apiRequest() : Observable<any> {
+    console.log("now location!!!");
+    console.log(this.address);
+    console.log(this.longitude);
+    console.log(this.latitude);
+    
     let getUrl = 'http://' + this.localhost + ':3000/food?standard=' + this.standard + '&longitude=' + this.longitude + '&latitude=' + this.latitude;
     return this.http.get(getUrl).map(res => res.json());  
   }
@@ -232,7 +238,7 @@ export class SuggestionsPage {
   }
 
   isActive(index, food) {
-    console.log(index);
+    //console.log(index);
     if (2 >= index) {
       return true;
     }

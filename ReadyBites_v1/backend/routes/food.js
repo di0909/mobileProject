@@ -15,8 +15,9 @@ router.get('/', function(req, res, next) {
 	var standard = req.query.standard;
 	var longitude = req.query.longitude;
 	var latitude = req.query.latitude;
-	  
-    console.log(standard);
+	
+	console.log(standard);
+	console.log('up is standard');
     //where 1 is ascending and -1 is desceding.
     var order = 1;
     if(_.isEqual(standard, "taste"))
@@ -26,12 +27,16 @@ router.get('/', function(req, res, next) {
 		center: [longitude,latitude],
 		maxDistance: 10*1000
 	}).sort({standard: order}).limit(10).exec(function(err, foods) {
-		if(err)
-			return console.log(err);
-		foods.forEach(function(food) {
-			console.log(food);
-		});
-		res.status(200).json(foods);
+		if(err) {
+			console.log(err)
+		} else {
+			foods.forEach(function(food) {
+				console.log(food);
+			});
+			res.status(200).json(foods);
+		}
+			// return console.log(err);
+		
 	});
 }); 
 
