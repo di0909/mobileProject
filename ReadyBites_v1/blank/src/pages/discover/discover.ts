@@ -20,7 +20,7 @@ declare var google;
 export class DiscoverPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.169.188";
+  localhost = global.localhost;
   fileTransfer: FileTransferObject = this.transfer.create();
   base64Image: any;
   foodId = 0;

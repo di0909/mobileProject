@@ -16,7 +16,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 export class SettingsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.169.188";
+  localhost = global.localhost;
   base64Image: any;
   fileTransfer: FileTransferObject = this.transfer.create();
   // user:any;

@@ -4,10 +4,10 @@
       <ion-title>Suggestions</ion-title>
     </ion-navbar>
   </ion-navbar>
-    <ion-item [(ngModel)]="searchType" name="searchType">        
+    <!-- <ion-item [(ngModel)]="searchType" name="searchType">        
       <ion-label> <ion-icon name="search"></ion-icon></ion-label>
       <ion-input clearInput type="text" placeholder="Food Type"></ion-input>
-    </ion-item>
+    </ion-item> -->
 
     <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       <ion-list>
@@ -35,16 +35,13 @@
       Get your location
     </ion-option>
     </ion-select>-->
-    <button id="search" ion-button outline color="royal" block (click)="render()">
-        Search
-    </button>
 
     <ion-row>
-        <ion-col width-15> 
+        <!-- <ion-col width-15> 
           <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged('distance')">
             Distance
           </button>
-        </ion-col>
+        </ion-col> -->
         <ion-col width-15>
           <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged('calories')">
             Calories
