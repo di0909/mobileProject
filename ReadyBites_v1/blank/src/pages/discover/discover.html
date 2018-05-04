@@ -31,7 +31,7 @@
     <button id="discover-button8" ion-button outline color="royal" block (click)="openGallery()">
       Open Gallery
     </button>
-    <img [src]="base64Image"/>
+    <img [src]="base64Image" [hidden]="!base64Image"/>
     <!--<button id="discover-button8" ion-button outline color="royal" block (click)="upLoadImage()">
       <ion-icon name="camera"></ion-icon>
       Upload Image
@@ -49,9 +49,6 @@
           🥗salad
         </ion-option>
         <ion-option>
-          🥪sandwich
-        </ion-option>
-        <ion-option>
           🍟french fries
         </ion-option>
         <ion-option>
@@ -64,13 +61,6 @@
           🍜noodles
         </ion-option>
       </ion-select>
-    </ion-item>
-    <ion-item id="discover-range3">
-      <ion-range min="0" max="100" step="1" color="positive" value="50" name="waitingTime" [(ngModel)]="waitingTime">
-        <ion-label range-left>
-          Waiting Time
-        </ion-label>
-      </ion-range>
     </ion-item>
 
     <!--<ion-item id="discover-select6">
@@ -88,44 +78,24 @@
           above 15 min
         </ion-option>
       </ion-select>
-    </ion-item> -->
-    <!--<ion-item id="discover-select4">
-      <ion-label>
-        Price
-      </ion-label>
-      <ion-select name="Price" [(ngModel)]="Price">
-        <ion-option>
-          $ 0-5
-        </ion-option>
-        <ion-option>
-          $ 5-10
-        </ion-option>
-        <ion-option>
-          $ 10+
-        </ion-option>
-      </ion-select>
-    </ion-item> -->
-    <ion-item id="discover-range4">
-      <ion-range min="0" max="100" step="1" color="positive" value="50" name="Price" [(ngModel)]="price">
-        <ion-label range-left>
-          Price
-        </ion-label>
-      </ion-range>
+    </ion-item>-->
+    <ion-item [(ngModel)]="waitingTime" name="waitingTime">
+        <ion-label color="primary" floating>waitingTime(min)</ion-label>
+        <ion-input></ion-input>
     </ion-item>
-    <ion-item id="discover-range1">
-      <ion-range min="0" max="100" step="1" color="positive" value="50" name="Rate" [(ngModel)]="rate">
-        <ion-label range-left>
-          Taste
-        </ion-label>
-      </ion-range>
-    </ion-item>
-    <ion-item id="discover-range2">
-      <ion-range min="0" max="100" step="1" color="positive" value="50" name="Calories" [(ngModel)]="calories">
-        <ion-label range-left>
-          Healthy Index
-        </ion-label>
-      </ion-range>
-    </ion-item>
+
+      <ion-item [(ngModel)]="calories" name="calories">
+          <ion-label color="primary" floating>Calories(kcal)</ion-label>
+          <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item [(ngModel)]="price" name="price">
+          <ion-label color="primary" floating>Price($)</ion-label>
+          <ion-input></ion-input>
+      </ion-item>
+
+      
+    
   </form>
   <button id="discover-button8" ion-button outline color="royal" block (click)="storeFood()">
     Finish

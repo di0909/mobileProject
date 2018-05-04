@@ -12,7 +12,7 @@ import {global} from '../global';
 export class SignInPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.128.218";
+  localhost = "localhost";
   username: any;
   password: any;
 

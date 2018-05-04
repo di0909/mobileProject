@@ -13,7 +13,7 @@ import { Details } from '../details/details';
 export class SettingsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.128.218";
+  localhost = "localhost";
   // user:any;
   user = {image:"", name:"di wang", calories:"100", points:"10", records:[{image: ""}]}
   // records = new Array(2);

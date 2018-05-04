@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild, ElementRef, NgZone } from '@angular/core';
+import { NavController, Platform} from 'ionic-angular';
 import { Http, RequestOptions} from '@angular/http';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
@@ -17,16 +17,22 @@ declare var google;
   templateUrl: 'suggestions.html'
 })
 export class SuggestionsPage {
+  @ViewChild('map') mapElement: ElementRef;
+  @ViewChild('searchbar', { read: ElementRef }) searchbar: ElementRef;
+  addressElement: HTMLInputElement = null;
+
   foodArray : any;
-  localhost = "128.237.128.218";
+  localhost = "localhost";
   standard: string = "distance";
   fileTransfer: FileTransferObject = this.transfer.create();
   latitude: Number;
   longitude: Number;
-  address: String;
+  address = '';
   geocoder = new google.maps.Geocoder();
 
-  stars = new Array(5);
+  stars = new Array(5);  
+  map: any;
+  autocomplete;
   //myRating = 1.5;
   //usds: Array<any>;
 
@@ -36,8 +42,14 @@ export class SuggestionsPage {
               private transfer: FileTransfer, private file: File,
               public geolocation: Geolocation,private changeDetectorRef: ChangeDetectorRef,
               private _applicationRef : ApplicationRef,
-              public geoService: GeoService) {
-
+              public geoService: GeoService,
+              public platform: Platform) {
+                this.platform.ready().then(() => {
+                  this.initAutocomplete();
+                  this.getCurrentPosition();
+                });
+                
+                
   }
   arrayBufferToBase64(buffer){
     var binary = '';
@@ -76,6 +88,7 @@ export class SuggestionsPage {
     console.log(this.address);
     console.log(this.longitude);
     console.log(this.latitude);
+    console.log(this.standard);
     
     let getUrl = 'http://' + this.localhost + ':3000/food?standard=' + this.standard + '&longitude=' + this.longitude + '&latitude=' + this.latitude;
     return this.http.get(getUrl).map(res => res.json());  
@@ -251,28 +264,76 @@ export class SuggestionsPage {
   showDetails(food) {
     console.log("before pushing");
     console.log(food);
-    
-    this.navCtrl.push(Details, food);
+    var param = {sLati:this.latitude,
+                sLong:this.longitude,
+                dLati:food.coordinates[1],
+                dLong:food.coordinates[0]}
+    this.navCtrl.push(Details, param);
+  }
+
+  initAutocomplete(): void {
+    this.addressElement = this.searchbar.nativeElement.querySelector('.searchbar-input');
+    this.createAutocomplete(this.addressElement).subscribe((location) => {
+      console.log('Searchdata', location);
+      let latLngObj = {'lat': location.lat(), 'long': location.lng()};
+    });
+  }
+
+  createAutocomplete(addressEl: HTMLInputElement): Observable<any> {
+    const autocomplete = new google.maps.places.Autocomplete(addressEl);
+    console.log("enter!");
+    // autocomplete.bindTo('bounds', this.map);
+    return new Observable((sub: any) => {
+      google.maps.event.addListener(autocomplete, 'place_changed', () => {
+        const place = autocomplete.getPlace();
+        console.log("enter before place");
+        console.log(place);
+        if (!place.geometry) {
+          sub.error({
+            message: 'Autocomplete returned place with no geometry'
+          });
+        } else {
+          let latLngObj = {'lat': place.geometry.location.lat(), 'long': place.geometry.location.lng()}
+          console.log(latLngObj);
+          this.latitude = place.geometry.location.lat();
+          this.longitude = place.geometry.location.lng();
+          //console.log(resp.coords.latitude);
+          //console.log(resp.coords.longitude);
+
+          this.geocodelatLng((address) => {
+            this.address = address;
+            this.getData();
+          }); 
+          //this.getAddress(latLngObj);
+          sub.next(place.geometry.location);
+        }
+      });
+    });
   }
 
   render() {
+    //this.address = this.autocomplete.getPlace();
     console.log("enter render");
-    var location;
+    //var location;
+    //console.log(this.address);
       if (!this.address) {
         this.getCurrentPosition();
       } else {
         this.getPositionByInput();
       }
-      
-      // this.address = location.address;
-      // console.log(this.address);
-      // this.latitude = location.latitude;
-      // this.longitude = location.longitude;
-      // this.getData();
   }
-  
-  /*ionViewWillEnter() {
+
+  onSegmentChanged(standard) {
+    console.log("enter changeStandard");
+    this.standard = standard;
+    console.log(this.standard);
+    //this.getData();
     this.render();
+  }
+
+  /*ionViewWillEnter() {
+    //this.render();
+    this.getCurrentPosition();
   }*/
 
 }

@@ -16,17 +16,38 @@ router.get('/', function(req, res, next) {
 	var longitude = req.query.longitude;
 	var latitude = req.query.latitude;
 	
-	console.log(standard);
-	console.log('up is standard');
     //where 1 is ascending and -1 is desceding.
-    var order = 1;
-    if(_.isEqual(standard, "taste"))
-    	order = -1;
+	order : Number;
+	order = 1;
 
-	myFood.find({}).where('coordinates').near({
-		center: [longitude,latitude],
-		maxDistance: 10
-	}).sort({standard: order}).limit(10).exec(function(err, foods) {
+	var query;
+    if(_.isEqual(standard, "rate")) {
+		query = myFood.find({}).where('coordinates').near({
+			center: [longitude,latitude],
+			maxDistance: 10*1000
+		}).sort({'rate' : -1}).limit(10);
+
+	} else if(_.isEqual(standard, "price")) {
+		query = myFood.find({}).where('coordinates').near({
+			center: [longitude,latitude],
+			maxDistance: 10*1000
+		}).sort({'price' : 1}).limit(10);
+
+	} else if(_.isEqual(standard, "calories")) {
+		query = myFood.find({}).where('coordinates').near({
+			center: [longitude,latitude],
+			maxDistance: 10*1000
+		}).sort({'calories' : 1}).limit(10);
+	} else {
+		query = myFood.find({}).where('coordinates').near({
+			center: [longitude,latitude],
+			maxDistance: 10*1000
+		}).limit(10);
+	}
+	console.log(order);
+	console.log(standard);
+
+	query.exec(function(err, foods) {
 		if(err) {
 			console.log(err)
 		} else {
@@ -35,8 +56,7 @@ router.get('/', function(req, res, next) {
 			});
 			res.status(200).json(foods);
 		}
-			// return console.log(err);
-		
+			// return console.log(err);		
 	});
 }); 
 
