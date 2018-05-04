@@ -32,14 +32,13 @@ export class LoginPage {
     console.log('before login');
     this.http.post(postUrl, this.toparams(user), options)
     .subscribe((res: Response) => {
-    alert("success");
-    // this.navCtrl.push(SignInPage);
+      alert("success");
+      this.navCtrl.push(TabsControllerPage, {username: this.username});
     }, (err) => {
     // error
-    alert("error"+JSON.stringify(err));
+      alert("error"+JSON.stringify(err));
+      this.navCtrl.push(LoginPage);
     });
-
-    this.navCtrl.push(TabsControllerPage, {username: this.username});
     //this.navCtrl.setRoot(TabPage);
   }
 

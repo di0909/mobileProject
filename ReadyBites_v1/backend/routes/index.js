@@ -35,7 +35,8 @@ router.post('/register', function(req, res, next) {
         if (!result.isEmpty()) {
             console.log('result is not empty!');
             var errors = result.mapped();
-            res.render('register', { errors: errors, validated: req.body});
+            return res.status(404).send({ errors: errors, validated: req.body});
+            // res.render('register', { errors: errors, validated: req.body});
         } else {
             console.log('result is empty! -good')
             var newUser = new User({
@@ -67,8 +68,7 @@ router.post('/register', function(req, res, next) {
 
                         }
                         console.log('finish! no error');
-                        res.location('/');
-                        res.redirect('/');
+                        return res.status(200).send(newUser);
                     });
                 });
             });
@@ -81,29 +81,38 @@ router.post('/register', function(req, res, next) {
 // });
 router.post("/login", function(req, res, next) {
     console.log('enter log in--');
-    passport.authenticate('local', function(err, user) {
+    console.log(req.body);
+    passport.authenticate('local', function(err, user, message) {
         console.log(user);
-        if (err) { return next(err) }
+        console.log('up is user');
+        console.log(message);
+
+        if (err) { 
+            return res.status(404).send(err);
+         }
         if (!user) {
-            return res.redirect("/");
+            return res.status(401).send(message);
+            // return res.redirect("/login");
         }
 
         // make passportjs setup the user object, serialize the user, ...
         req.login(user, {}, function(err) {
-            if (err) { return next(err) };
+            if (err) { 
+                return res.status(404).send(err); 
+            };
             // send username to chat page
             req.session.username = user.username;
-            return res.redirect("/chat");
+            return res.status(200).send(user);
         });
     })(req, res, next);
     return;
 });
 
-router.post('/login',
-    passport.authenticate('local', {failureRedirect: '/login',
-        failureFlash: 'Invalid username or password',
-        successRedirect: '/'})
-);
+// router.post('/login',
+//     passport.authenticate('local', {failureRedirect: '/login',
+//         failureFlash: 'Invalid username or password',
+//         successRedirect: '/'})
+// );
 passport.serializeUser(function(user, done) {
     done(null, user.id);
 });

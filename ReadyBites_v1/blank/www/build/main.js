@@ -40,7 +40,9 @@ var LoginPage = /** @class */ (function () {
             return p.join('&');
         };
     }
+    LoginPage_1 = LoginPage;
     LoginPage.prototype.login = function () {
+        var _this = this;
         var user = {
             'username': this.username,
             'password': this.password,
@@ -53,25 +55,26 @@ var LoginPage = /** @class */ (function () {
         this.http.post(postUrl, this.toparams(user), options)
             .subscribe(function (res) {
             alert("success");
-            // this.navCtrl.push(SignInPage);
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__tabs_controller_tabs_controller__["a" /* TabsControllerPage */], { username: _this.username });
         }, function (err) {
             // error
             alert("error" + JSON.stringify(err));
+            _this.navCtrl.push(LoginPage_1);
         });
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__tabs_controller_tabs_controller__["a" /* TabsControllerPage */], { username: this.username });
         //this.navCtrl.setRoot(TabPage);
     };
     LoginPage.prototype.renderSignIn = function () {
         console.log('--- enter before sign in page');
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signIn_signIn__["a" /* SignInPage */]);
     };
-    LoginPage = __decorate([
+    LoginPage = LoginPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/Users/xiu/Desktop/mobileProject/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col></ion-col>\n    <ion-col width-67>\n      <img src="http://placehold.it/300x200"/>\n    </ion-col>\n    <ion-col></ion-col>\n  </ion-row>\n  <div>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            \n            <!-- <ion-item [(ngModel)]="address" name="address">        \n              <ion-label> <ion-icon name="locate"></ion-icon></ion-label>\n              <ion-input clearInput type="text" placeholder="Current Location"></ion-input>\n            </ion-item> -->\n\n            <ion-item>\n              <ion-input clearInput type="text" placeholder="UserName"  name="username" [(ngModel)]="username" required></ion-input>\n            </ion-item>\n            \n            <ion-item>\n              <ion-input clearInput type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n            </ion-item>\n            \n          </ion-list>\n        </ion-col>\n      </ion-row>\n      \n      <ion-row>\n        <ion-col>\n          <button ion-button ion-button outline color="royal" block [disabled]="!registerForm.form.valid" (click)="login()">Login</button>\n          <button ion-button ion-button outline color="royal" block (click)="renderSignIn()">Create New Account</button>\n        </ion-col>\n      </ion-row>\n      \n    </form>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/mobileProject/mobileProject/ReadyBites_v1/blank/src/pages/login/login.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object])
     ], LoginPage);
     return LoginPage;
+    var LoginPage_1, _a, _b;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -432,7 +435,9 @@ var SignInPage = /** @class */ (function () {
             return p.join('&');
         };
     }
+    SignInPage_1 = SignInPage;
     SignInPage.prototype.createAccount = function () {
+        var _this = this;
         //save user info
         console.log('enter create account');
         console.log('good');
@@ -450,21 +455,21 @@ var SignInPage = /** @class */ (function () {
         this.http.post(postUrl, this.toparams(user), options)
             .subscribe(function (res) {
             alert("success");
-            // this.navCtrl.push(SignInPage);
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__suggestions_suggestions__["a" /* SuggestionsPage */], { username: _this.username });
         }, function (err) {
             // error
             alert("error" + JSON.stringify(err));
+            _this.navCtrl.push(SignInPage_1);
         });
-        ////////？？？？？？？
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__suggestions_suggestions__["a" /* SuggestionsPage */], { username: this.username });
     };
-    SignInPage = __decorate([
+    SignInPage = SignInPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-signIn',template:/*ion-inline-start:"/Users/xiu/Desktop/mobileProject/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        SignIn\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding>\n    <ion-row>\n      <ion-col></ion-col>\n      <ion-col width-67>\n        <img src="http://placehold.it/300x200"/>\n      </ion-col>\n      <ion-col></ion-col>\n    </ion-row>\n    <div>\n        <ion-row>\n          <ion-col>\n            <ion-list inset>\n              \n              <ion-item [(ngModel)]="username" name="username">\n                <ion-input type="text" placeholder="UserName"></ion-input>\n              </ion-item>\n              \n              <ion-item>\n                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n              </ion-item>\n              \n            </ion-list>\n          </ion-col>\n        </ion-row>\n        \n        <ion-row>\n          <ion-col>\n            <button ion-button ion-button outline color="royal" block (click)="createAccount()">Create New Account</button>\n          </ion-col>\n        </ion-row>\n        \n    </div>\n  </ion-content>'/*ion-inline-end:"/Users/xiu/Desktop/mobileProject/mobileProject/ReadyBites_v1/blank/src/pages/signIn/signIn.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object])
     ], SignInPage);
     return SignInPage;
+    var SignInPage_1, _a, _b;
 }());
 
 //# sourceMappingURL=signIn.js.map

@@ -37,14 +37,12 @@ export class SignInPage {
     this.http.post(postUrl, this.toparams(user), options)
       .subscribe((res: Response) => {
         alert("success");
-        // this.navCtrl.push(SignInPage);
+        this.navCtrl.push(SuggestionsPage, {username: this.username});
       }, (err) => {
         // error
         alert("error"+JSON.stringify(err));
+        this.navCtrl.push(SignInPage);
       });
-
-      ////////？？？？？？？
-    this.navCtrl.push(SuggestionsPage, {username: this.username});
   }  
   toparams = function ObjecttoParams(obj) {
     var p = [];
