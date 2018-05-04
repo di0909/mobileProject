@@ -13,9 +13,13 @@ declare var google:any;
   templateUrl: 'details.html'
 })
 export class Details {
-  localhost = "128.237.128.218";
-  saddr: '40.4428122,-79.9452015';
-  daddr: '40.4378611,-79.9227327';
+  localhost = "localhost";
+  //saddr: '40.4428122,-79.9452015';
+  //daddr: '40.4378611,-79.9227327';
+  sLati:any;
+  sLong:any;
+  dLati:any;
+  dLong:any;
   marker: any;
 
   food: any;
@@ -29,6 +33,10 @@ export class Details {
               public inAppBrowser: InAppBrowser,
               public http: Http,) {
     this.food = this.navParams.data;
+    this.sLati =  this.food.sLati;
+    this.sLong = this.food.sLong;
+    this.dLati = this.food.dLati;
+    this.dLong = this.food.dLong;
     alert(this.food);
   }
   doConfirm() {
@@ -147,8 +155,8 @@ export class Details {
   }
 
   showMap(){
-    var location = {"lat":40.4428122,"lng":-79.9452015};
-    var dst = {"lat":40.4328122,"lng":-79.8452015}
+    var location = {"lat":this.sLati,"lng":this.sLong};
+    var dst = {"lat":this.dLati,"lng":this.dLong}
     const options = {
       center: location,
       zoom: 15,
@@ -210,7 +218,10 @@ export class Details {
     const options: InAppBrowserOptions = {
       zoom: 'no'
     }
-    const browser = this.inAppBrowser.create("https://www.google.com/maps/dir/40.4428122,-79.9452015/40.4378611,-79.9227327/@40.4411697,-79.9520621,14z/data=!3m1!4b1!4m2!4m1!3e3?hl=en", '_self', options);
+    alert(this.food);
+    var url = "https://www.google.com/maps/dir/" + this.sLati + "," + this.sLong + "/" + this.dLati + "," + this.dLong;
+    //const browser = this.inAppBrowser.create("https://www.google.com/maps/dir/40.4428122,-79.9452015/40.4378611,-79.9227327/@40.4411697,-79.9520621,14z/data=!3m1!4b1!4m2!4m1!3e3?hl=en", '_self', options);
+    const browser = this.inAppBrowser.create(url, '_self', options);
     //browser.on('')
   }
 

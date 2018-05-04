@@ -4,10 +4,23 @@ var mongoose = require('mongoose');
 var FoodSchema = new mongoose.Schema({
     type: String,
     waitingTime: Number,
-    calories: Number,
-    rate: Number,
-    price: Number,
-    image: String,
+    calories: {
+        type: Number,
+        default: 0,
+    },
+    rate: {
+        type: Number,
+        default: 0,
+    },
+    price: {
+        type: Number,
+        default: 0,
+    },
+    image: {
+        type: String,
+        default: '0',
+
+    },
     //location: {
         // It's important to define type within type field, because
         // mongoose use "type" to identify field's object type.

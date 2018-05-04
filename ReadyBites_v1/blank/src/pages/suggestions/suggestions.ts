@@ -44,7 +44,11 @@ export class SuggestionsPage {
               private _applicationRef : ApplicationRef,
               public geoService: GeoService,
               public platform: Platform) {
-                this.platform.ready().then(() => this.initAutocomplete());
+                this.platform.ready().then(() => {
+                  this.initAutocomplete();
+                  this.getCurrentPosition();
+                });
+                
                 
   }
   arrayBufferToBase64(buffer){
@@ -260,8 +264,11 @@ export class SuggestionsPage {
   showDetails(food) {
     console.log("before pushing");
     console.log(food);
-    
-    this.navCtrl.push(Details, food);
+    var param = {sLati:this.latitude,
+                sLong:this.longitude,
+                dLati:food.coordinates[1],
+                dLong:food.coordinates[0]}
+    this.navCtrl.push(Details, param);
   }
 
   initAutocomplete(): void {
@@ -324,9 +331,9 @@ export class SuggestionsPage {
     this.render();
   }
 
-  ionViewWillEnter() {
+  /*ionViewWillEnter() {
     //this.render();
     this.getCurrentPosition();
-  }
+  }*/
 
 }
