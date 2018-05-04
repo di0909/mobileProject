@@ -1,5 +1,14 @@
 page-suggestions {
-    .my-width{
-		width:60px;
-	}
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5%;
+  }
+
+  ion-icon[name="logo-usd"],
+  ion-icon[name="logo-euro"] {
+    font-size: 11px;
+    color: #999999;
+  }
 }

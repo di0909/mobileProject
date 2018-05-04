@@ -73,15 +73,42 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let food of foodArray" (tap)="showDetails(food)">
-      <!--<img [src]='food.image'> -->
+    <!--<ion-card *ngFor="let food of foodArray" (tap)="showDetails(food)">
+      <img [src]='food.image'>
       <ion-card-content>        
         <ion-card-title>
-            {{food.type}}
+            {{food.type}}          {{food.distance}} mile
         </ion-card-title>
         <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
       </ion-card-content>
-    </ion-card>  
+    </ion-card>  -->
+
+    <ion-list>
+      <ion-item *ngFor="let food of foodArray" (tap)="showDetails(food)" text-wrap detail-none>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-25>
+              <img [src]='food.image'>
+            </ion-col>
+            <ion-col>
+              <h2> {{food.type}} </h2>
+              <p>
+                  <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, food)}"></ion-icon>
+                {{food.reviewCount}} Reviews
+              </p>
+              <p>{{food.address}}</p>
+              <p>{{food.waitingTime}}</p>
+            </ion-col>
+            <ion-col width-20 text-right>
+              <p>{{food.distance}}mi.</p>
+              <p> ${{food.distance}}</p>
+              <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->
+            </ion-col>
+          </ion-row>
+        </ion-grid>      
+      </ion-item>
+    </ion-list>
+
 </ion-content>
 
 <!--

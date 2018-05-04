@@ -5,7 +5,7 @@ var FoodSchema = new mongoose.Schema({
     type: String,
     waitingTime: Number,
     calories: Number,
-    taste: Number,
+    rate: Number,
     price: Number,
     image: String,
     //location: {
@@ -13,7 +13,7 @@ var FoodSchema = new mongoose.Schema({
         // mongoose use "type" to identify field's object type.
         //type: {type: String, default: 'Point'},
         coordinates: {type: [Number], default: [0, 0]},
-        address: String
+        address: String,
     //}
     /*location: {
         coordinates:{
@@ -21,6 +21,7 @@ var FoodSchema = new mongoose.Schema({
             index: '2dsphere'
         }
     }*/
+    rating: []
 });
 
 

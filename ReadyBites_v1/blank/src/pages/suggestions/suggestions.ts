@@ -4,9 +4,12 @@ import { Http, RequestOptions} from '@angular/http';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Geolocation } from '@ionic-native/geolocation';
-//import { Food } from '../../components/Food';
+
 import { Details } from '../details/details';
 import { Observable } from 'rxjs';
+import { ChangeDetectorRef } from "@angular/core";
+import { ApplicationRef } from '@angular/core';
+import { GeoService } from '../../providers/geo-service';
 
 declare var google;
 @Component({
@@ -15,18 +18,24 @@ declare var google;
 })
 export class SuggestionsPage {
   foodArray : any;
-  localhost = "128.237.169.188";
+  localhost = "localhost";
   standard: string = "distance";
   fileTransfer: FileTransferObject = this.transfer.create();
   latitude: Number;
   longitude: Number;
   address: String;
   geocoder = new google.maps.Geocoder();
+
+  stars = new Array(5);
+  //usds: Array<any>;
+
   // this tells the tabs component which Pages
   // should be each tab's root Page
   constructor(public navCtrl: NavController,public http: Http,
               private transfer: FileTransfer, private file: File,
-              public geolocation: Geolocation) {
+              public geolocation: Geolocation,private changeDetectorRef: ChangeDetectorRef,
+              private _applicationRef : ApplicationRef,
+              public geoService: GeoService) {
 
   }
   arrayBufferToBase64(buffer){
@@ -65,7 +74,14 @@ export class SuggestionsPage {
     let getUrl = 'http://' + this.localhost + ':3000/food?standard=' + this.standard + '&longitude=' + this.longitude + '&latitude=' + this.latitude;
     return this.http.get(getUrl).map(res => res.json());  
   }
-
+  /*getData() {
+    let TIME_IN_MS = 1000;
+    let hideFooterTimeout = setTimeout( () => {
+      this.getDataHelper();
+      //this.changeDetectorRef.detectChanges();
+      this._applicationRef.tick();
+    }, TIME_IN_MS);
+  }*/
   getData() {
     new Observable
     (
@@ -78,12 +94,30 @@ export class SuggestionsPage {
     ).subscribe
       (
         res => {
-          this.foodArray = res
+          this.foodArray  = this.formatFoodArray(res)
           console.log(this.foodArray)
+          //console.log(this.foodArray.coordinates[0]);
+          //console.log(this.foodArray.coordinates[1]);
+          this.changeDetectorRef.detectChanges();
         }
       );
   }
 
+  formatFoodArray(res) {
+    for (var i in res) {
+      var dis = this.computeDistance(res[i].coordinates[1], res[i].coordinates[0], this.latitude, this.longitude);
+      res[i]['distance'] = (dis * 0.621371192).toFixed(2);;
+
+      var foodId = res[i].image;
+      //console.log(res[i].image);
+      res[i]['image'] = 'http://' + this.localhost + ':3000/image?id=' + foodId;
+
+      res[i]['reviewCount'] = 10; 
+      console.log(res[i]);
+
+    }
+    return res;
+  }
     /*let promise = new Promise((resolve, reject) => {
       let getUrl = 'http://' + this.localhost + ':3000/food?standard=' + this.standard + '&longitude=' + this.longitude + '&latitude=' + this.latitude;
       this.http.get(getUrl)
@@ -183,10 +217,27 @@ export class SuggestionsPage {
     });
   }
 
-  computeDistance(coordinates) {
-
+  computeDistance(lat1, lon1, lat2, lon2) {
+    var p = 0.017453292519943295;    // Math.PI / 180
+    var c = Math.cos;
+    var a = 0.5 - c((lat2 - lat1) * p)/2 + 
+            c(lat1 * p) * c(lat2 * p) * 
+            (1 - c((lon2 - lon1) * p))/2;
+  
+    return 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
   }
 
+  getArray(size): Array<any> {
+    return new Array(size);
+  }
+
+  isActive(index, food) {
+    console.log(index);
+    if (2 >= index) {
+      return true;
+    }
+    return false;
+  }
 
   showDetails(food) {
     console.log("before pushing");
@@ -195,12 +246,20 @@ export class SuggestionsPage {
     this.navCtrl.push(Details, food);
   }
 
-  render(){
+  render() {
     console.log("enter render");
-      if (!this.address)
+    var location;
+      if (!this.address) {
         this.getCurrentPosition();
-      else
+      } else {
         this.getPositionByInput();
+      }
+      
+      // this.address = location.address;
+      // console.log(this.address);
+      // this.latitude = location.latitude;
+      // this.longitude = location.longitude;
+      // this.getData();
   }
 
   onSegmentChanged($event) {
@@ -210,8 +269,8 @@ export class SuggestionsPage {
     this.getData();
   }
 
-  ionViewWillEnter() {
+  /*ionViewWillEnter() {
     this.render();
-  }
+  }*/
 
 }

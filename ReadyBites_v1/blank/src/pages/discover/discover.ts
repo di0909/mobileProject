@@ -18,7 +18,8 @@ declare var google;
 export class DiscoverPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.169.188";
+  localhost = "localhost";
+
   fileTransfer: FileTransferObject = this.transfer.create();
   base64Image: any;
   foodId = 0;
@@ -29,7 +30,7 @@ export class DiscoverPage {
   type: any;
   waitingTime: any;
   price: any;
-  taste: any;
+  rate: any;
   calories: any;
   searchType: any;
   geocoder = new google.maps.Geocoder();
@@ -103,7 +104,7 @@ export class DiscoverPage {
     console.log(this.foodId);
     var food = {
                   'type':this.type,'waitingTime':this.waitingTime,
-                  'calories':this.calories,'taste':this.taste,
+                  'calories':this.calories,'rate':this.rate,
                   'price':this.price,'image': this.foodId, 
                   'latitude': this.latitude,
                   'longitude': this.longitude,
