@@ -30,7 +30,7 @@ var LoginPage = /** @class */ (function () {
         this.http = http;
         // this tells the tabs component which Pages
         // should be each tab's root Page
-        this.localhost = "localhost";
+        this.localhost = "128.237.128.218";
         this.toparams = function ObjecttoParams(obj) {
             var p = [];
             for (var key in obj) {
@@ -130,7 +130,7 @@ var SuggestionsPage = /** @class */ (function () {
         this.changeDetectorRef = changeDetectorRef;
         this._applicationRef = _applicationRef;
         this.geoService = geoService;
-        this.localhost = "localhost";
+        this.localhost = "128.237.128.218";
         this.standard = "distance";
         this.fileTransfer = this.transfer.create();
         this.geocoder = new google.maps.Geocoder();
@@ -425,7 +425,7 @@ var SignInPage = /** @class */ (function () {
         this.http = http;
         // this tells the tabs component which Pages
         // should be each tab's root Page
-        this.localhost = "localhost";
+        this.localhost = "128.237.128.218";
         this.toparams = function ObjecttoParams(obj) {
             var p = [];
             for (var key in obj) {
@@ -748,7 +748,7 @@ var DiscoverPage = /** @class */ (function () {
         this.geolocation = geolocation;
         // this tells the tabs component which Pages
         // should be each tab's root Page
-        this.localhost = "localhost";
+        this.localhost = "128.237.128.218";
         this.fileTransfer = this.transfer.create();
         this.foodId = 0;
         this.geocoder = new google.maps.Geocoder();

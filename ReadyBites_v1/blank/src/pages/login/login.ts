@@ -12,7 +12,7 @@ import { TabsControllerPage } from '../tabs-controller/tabs-controller';
 export class LoginPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "localhost";
+  localhost = "128.237.128.218";
   username: any;
   password: any;
   constructor(public navCtrl: NavController, public http: Http,) {

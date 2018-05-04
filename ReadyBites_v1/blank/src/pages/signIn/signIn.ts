@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http, RequestOptions, Headers, Response} from '@angular/http';
 import {SuggestionsPage} from '../suggestions/suggestions';
+import { TabsControllerPage } from '../tabs-controller/tabs-controller';
 
 @Component({
   selector: 'page-signIn',
@@ -10,7 +11,7 @@ import {SuggestionsPage} from '../suggestions/suggestions';
 export class SignInPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "localhost";
+  localhost = "128.237.128.218";
   username: any;
   password: any;
 
@@ -37,7 +38,7 @@ export class SignInPage {
     this.http.post(postUrl, this.toparams(user), options)
       .subscribe((res: Response) => {
         alert("success");
-        this.navCtrl.push(SuggestionsPage, {username: this.username});
+        this.navCtrl.push(TabsControllerPage, {username: this.username});
       }, (err) => {
         // error
         alert("error"+JSON.stringify(err));

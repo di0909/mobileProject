@@ -25740,6 +25740,55 @@ page-details ul.rating li ion-icon {
   font-size: 30px;
 }
 
-page-suggestions .my-width {
-  width: 60px;
+page-settings .profile-item {
+  text-align: center;
+}
+
+page-settings .profile-picture {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 3px;
+  border-radius: 100%;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+}
+
+page-settings .profile-picture img {
+  width: 128px;
+  border-radius: 100%;
+}
+
+page-settings .profile-name {
+  padding-top: 20px;
+  font-size: x-large !important;
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+
+page-settings .record {
+  background-color: #FFFFFF;
+  padding: 20px 0px;
+}
+
+page-settings .record h3 {
+  margin-top: 0px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+page-suggestions img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+page-suggestions ion-icon[name="logo-usd"],
+page-suggestions ion-icon[name="logo-euro"] {
+  font-size: 11px;
+  color: #999999;
 }
