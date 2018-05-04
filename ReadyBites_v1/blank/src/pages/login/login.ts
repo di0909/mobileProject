@@ -12,38 +12,40 @@ import { TabsControllerPage } from '../tabs-controller/tabs-controller';
 export class LoginPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.177.21";
+  localhost = "localhost";
   username: any;
   password: any;
   constructor(public navCtrl: NavController, public http: Http,) {
   }
   
   login() {
+    var user = {
+      'username':this.username,
+      'password':this.password,
+    };
+    console.log(user);
+
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    let options = new RequestOptions({ headers: headers });
+    let postUrl = "http://" + this.localhost + ":3000/login";
+
+    console.log('before login');
+    this.http.post(postUrl, this.toparams(user), options)
+    .subscribe((res: Response) => {
+    alert("success");
+    // this.navCtrl.push(SignInPage);
+    }, (err) => {
+    // error
+    alert("error"+JSON.stringify(err));
+    });
+
     this.navCtrl.push(TabsControllerPage, {username: this.username});
     //this.navCtrl.setRoot(TabPage);
   }
 
-  createAccount() {
-    console.log('enter create account');
-    console.log('good');
-    console.log(this.username);
-    console.log('bad');
-    var user = {
-                  'username':this.username,
-                  'password':this.password,
-              };
-
-    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let options = new RequestOptions({ headers: headers });
-    let postUrl = "http://" + this.localhost + ":3000/register";
-    this.http.post(postUrl, this.toparams(user), options)
-      .subscribe((res: Response) => {
-        alert("success");
-        this.navCtrl.push(SignInPage);
-      }, (err) => {
-        // error
-        alert("error"+JSON.stringify(err));
-      });
+  renderSignIn() {
+    console.log('--- enter before sign in page');
+    this.navCtrl.push(SignInPage);
   }
 
   toparams = function ObjecttoParams(obj) {
@@ -51,7 +53,8 @@ export class LoginPage {
     for (var key in obj) {
         p.push(key + '=' + encodeURIComponent(obj[key]));
     }
+    console.log(p);
     return p.join('&');
-};
+  };
 
 }

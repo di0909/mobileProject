@@ -10,7 +10,7 @@ import {SuggestionsPage} from '../suggestions/suggestions';
 export class SignInPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  localhost = "128.237.177.21";
+  localhost = "localhost";
   username: any;
   password: any;
 
@@ -27,19 +27,23 @@ export class SignInPage {
                   'username':this.username,
                   'password':this.password,
               };
+    console.log(user);
 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
     let options = new RequestOptions({ headers: headers });
     let postUrl = "http://" + this.localhost + ":3000/register";
+
+    console.log('before post');
     this.http.post(postUrl, this.toparams(user), options)
       .subscribe((res: Response) => {
         alert("success");
-        this.navCtrl.push(SignInPage);
+        // this.navCtrl.push(SignInPage);
       }, (err) => {
         // error
         alert("error"+JSON.stringify(err));
       });
 
+      ////////？？？？？？？
     this.navCtrl.push(SuggestionsPage, {username: this.username});
   }  
   toparams = function ObjecttoParams(obj) {
@@ -47,6 +51,7 @@ export class SignInPage {
     for (var key in obj) {
         p.push(key + '=' + encodeURIComponent(obj[key]));
     }
+    console.log(p);
     return p.join('&');
 };
 }

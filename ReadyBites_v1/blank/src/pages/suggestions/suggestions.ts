@@ -15,7 +15,7 @@ declare var google;
 })
 export class SuggestionsPage {
   foodArray : any;
-  localhost = "128.237.169.188";
+  localhost = "localhost";
   standard: string = "distance";
   fileTransfer: FileTransferObject = this.transfer.create();
   latitude: Number;

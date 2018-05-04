@@ -25,8 +25,8 @@
               <ion-input clearInput type="text" placeholder="Current Location"></ion-input>
             </ion-item> -->
 
-            <ion-item name="username" [(ngModel)]="username">
-              <ion-input clearInput type="text" placeholder="UserName"  required></ion-input>
+            <ion-item>
+              <ion-input clearInput type="text" placeholder="UserName"  name="username" [(ngModel)]="username" required></ion-input>
             </ion-item>
             
             <ion-item>
@@ -40,7 +40,7 @@
       <ion-row>
         <ion-col>
           <button ion-button ion-button outline color="royal" block [disabled]="!registerForm.form.valid" (click)="login()">Login</button>
-          <button ion-button ion-button outline color="royal" block (click)="createAccount()">Create New Account</button>
+          <button ion-button ion-button outline color="royal" block (click)="renderSignIn()">Create New Account</button>
         </ion-col>
       </ion-row>
       

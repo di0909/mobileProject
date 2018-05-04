@@ -37,6 +37,7 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
+	console.log('----this code');
 	console.log("enter post food");
 	var data = req.body;
 	console.log(data);

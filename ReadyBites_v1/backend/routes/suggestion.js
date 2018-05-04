@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
   	var standard = req.query.id;
     console.log(standard);
   	myFood.sort({standard:-1}).exec(callback); 
-
 });
 
 module.exports = router;
