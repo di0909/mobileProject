@@ -22,7 +22,7 @@ import { File } from '@ionic-native/file';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 import { Ionic2RatingModule } from 'ionic2-rating';
-
+import { GeoService } from '../providers/geo-service';
 
 @NgModule({
   declarations: [
@@ -63,6 +63,7 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     NativeGeocoder,
     File,
     InAppBrowser,
+    GeoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

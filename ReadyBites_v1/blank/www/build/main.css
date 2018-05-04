@@ -25740,6 +25740,16 @@ page-details ul.rating li ion-icon {
   font-size: 30px;
 }
 
-page-suggestions .my-width {
-  width: 60px;
+page-suggestions img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+page-suggestions ion-icon[name="logo-usd"],
+page-suggestions ion-icon[name="logo-euro"] {
+  font-size: 11px;
+  color: #999999;
 }
