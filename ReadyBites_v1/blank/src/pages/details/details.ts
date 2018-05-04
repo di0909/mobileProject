@@ -13,7 +13,7 @@ declare var google:any;
   templateUrl: 'details.html'
 })
 export class Details {
-  localhost = "localhost";
+  localhost = "128.237.169.188";
   //saddr: '40.4428122,-79.9452015';
   //daddr: '40.4378611,-79.9227327';
   sLati:any;

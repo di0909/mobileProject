@@ -23,7 +23,7 @@ export class SuggestionsPage {
   addressElement: HTMLInputElement = null;
 
   foodArray : any;
-  localhost = "localhost";
+  localhost = "128.237.169.188";
   standard: string = "distance";
   fileTransfer: FileTransferObject = this.transfer.create();
   latitude: Number;
