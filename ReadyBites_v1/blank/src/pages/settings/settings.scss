@@ -70,6 +70,9 @@ page-settings {
         -webkit-border-radius: 50%;
         border-radius: 50%;
     }
+    .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+      margin: 0 0 0 0;
+  }
     
   }
   

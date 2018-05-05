@@ -25815,6 +25815,10 @@ page-settings .circle-pic {
   border-radius: 50%;
 }
 
+page-settings .item-md [item-left], page-settings .item-md [item-right], page-settings .item-md [item-start], page-settings .item-md [item-end] {
+  margin: 0 0 0 0;
+}
+
 page-suggestions img {
   width: 75px;
   height: 75px;
@@ -25827,6 +25831,14 @@ page-suggestions ion-icon[name="logo-usd"],
 page-suggestions ion-icon[name="logo-euro"] {
   font-size: 11px;
   color: #999999;
+}
+
+page-suggestions ion-icon[name="star"] {
+  margin: 0 0 0 0;
+}
+
+page-suggestions .item-md [item-left], page-suggestions .item-md [item-right], page-suggestions .item-md [item-start], page-suggestions .item-md [item-end] {
+  margin: 0 0 0 0;
 }
 
 page-suggestions .search-box {

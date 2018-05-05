@@ -92,7 +92,7 @@ export class DiscoverPage {
     this.fileTransfer.upload(this.base64Image, 'http://' + this.localhost + ':3000/image', options1)
       .then((data) => {
         // success
-        alert("upload image success");
+        alert("success");
       }, (err) => {
         // error
         alert("upload image error"+JSON.stringify(err));
@@ -129,7 +129,7 @@ export class DiscoverPage {
         //this.changeDetectorRef.detectChanges();
         this.addScore();
         this.refresh();
-        alert("success");
+        // alert("success");
       }, (err) => {
         // error
         alert("error"+JSON.stringify(err));

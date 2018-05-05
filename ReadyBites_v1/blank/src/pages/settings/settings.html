@@ -22,6 +22,7 @@
       </div>
 
       <div id="chart" style="width:100%;height:250px;"></div>
+
       <ion-list>
         <ion-item *ngFor="let food of user.records" (tap)="showDetails(food)" text-wrap detail-none>
           <ion-grid>
@@ -29,25 +30,15 @@
               <ion-col width-25>
                 <img [src]='food.image'>
               </ion-col>
-              <ion-col>
+              <ion-col width-50>
                 <h2> {{food.type}} </h2>
                 <p>
-                    <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, food)}"></ion-icon>
-                    <!--<ion-item>
-                        <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>
-                        <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>
-                        <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>
-                        <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>
-                        <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>
-                        <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
-                        <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
-                        <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
-                        <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
-                        <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
-                        <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>
-                      </ion-item>-->
-                      
-                    {{food.reviewCount}} Reviews
+                    <ion-icon *ngIf="food.rate>=1" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=2" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=3" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=4" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=5" name="star" item-end small></ion-icon> 
+                      <!-- Rate {{food.rate}}  -->
                 </p>
                 <p>{{food.address}}</p>
               </ion-col>

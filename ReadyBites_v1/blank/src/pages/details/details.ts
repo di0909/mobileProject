@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 import { Http, RequestOptions, Headers, Response} from '@angular/http';
+import { ChangeDetectorRef } from "@angular/core";
 
 import {global} from '../global';
 declare var google:any;
@@ -25,6 +26,7 @@ export class Details {
   food: any;
   inputData: any;
   reviewScore: Number;
+  rate: Number;
   //stars: Array<any> = new Array(5);
   @ViewChild('map') mapRef: ElementRef;
 
@@ -32,16 +34,14 @@ export class Details {
               public navParams: NavParams,
               public alertCtrl: AlertController,
               public inAppBrowser: InAppBrowser,
-              public http: Http,) {
+              public http: Http,
+              private changeDetectorRef: ChangeDetectorRef,) {
     this.inputData = this.navParams.data;
-    console.log('food');
-    console.log(this.inputData );
     this.sLati =  this.inputData.sLati;
     this.sLong = this.inputData.sLong;
     this.dLati = this.inputData.dLati;
     this.dLong = this.inputData.dLong;
     this.food = this.inputData.foodObj;
-    alert(this.inputData);
   }
   doConfirm() {
     let confirm = this.alertCtrl.create({
@@ -139,7 +139,11 @@ export class Details {
     console.log('before login');
     this.http.post(postUrl, this.toparams(data), options)
     .subscribe((res: Response) => {
+      console.log('look here');
+      // console.log(res);
+      // this.food.rate = res.json().rate;
       this.refresh();
+      this.changeDetectorRef.detectChanges();
       alert("success");
     }, (err) => {
     // error
@@ -149,7 +153,7 @@ export class Details {
   }
   refresh() {
     console.log("enter refresh");
-
+    this.rate = 0;
   }
 
   /*isActive(index: number) {

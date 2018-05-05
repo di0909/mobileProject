@@ -256,10 +256,10 @@ export class SuggestionsPage {
     return new Array(size);
   }
 
-  isActive(index, food) {
+  isActive(index, rate) {
     // console.log(index);
     // console.log(food.rate);
-    if (food.rate >= index) {
+    if (rate >= index) {
       console.log('true');
       return true;
     } else {

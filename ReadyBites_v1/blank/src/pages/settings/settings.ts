@@ -20,8 +20,9 @@ export class SettingsPage {
   base64Image: any;
   fileTransfer: FileTransferObject = this.transfer.create();
   // user:any;
-  user = {image:"", name:"di wang", calories:"100", points:"10", records:[{image: ""}]}
+  user = {image:"0", name:"di wang", calories:"100", points:"10", records:[{image: ""}]}
   records: any;
+  rate:0;
 
   constructor(public navCtrl: NavController, public http: Http, private changeDetectorRef: ChangeDetectorRef,private camera: Camera,private transfer: FileTransfer) {
     // console.log('settings controll');
@@ -41,7 +42,6 @@ export class SettingsPage {
   render() {
     console.log("enter render");
     this.getData();
-    this.loadFigure();
   }
 
   apiRequest() : Observable<any> {
@@ -66,6 +66,7 @@ export class SettingsPage {
       (
         res => {
           this.formatUser(res);
+          this.loadFigure();
           console.log(this.user);
           this.changeDetectorRef.detectChanges();
         }
@@ -131,7 +132,7 @@ export class SettingsPage {
     const chart = ec.init(container);
     let option = {
       title: {
-          text: 'calorie week chart'
+          text: 'Calorie Recent Chart'
       },
       tooltip: {},
       // legend: {

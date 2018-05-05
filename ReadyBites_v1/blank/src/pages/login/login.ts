@@ -29,6 +29,7 @@ export class LoginPage {
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
     let options = new RequestOptions({ headers: headers });
     let postUrl = "http://" + this.localhost + ":3000/login";
+    console.log(postUrl);
 
     console.log('before login');
     this.http.post(postUrl, this.toparams(user), options)
